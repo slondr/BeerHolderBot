@@ -4,6 +4,7 @@ version = "0.1.0"
 authors = ["Eric S. Londres <elondres@stevens.edu>"]
 edition = "2018"
 description = ""
+licence = "AGPLv3+"
 [dependencies]
 teloxide = "0.3"
 teloxide-macros = "0.3"
