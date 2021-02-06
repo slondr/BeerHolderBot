@@ -3,11 +3,11 @@ name = "BeerHolderBot"
 version = "0.1.0"
 authors = ["Eric S. Londres <elondres@stevens.edu>"]
 edition = "2018"
-description = ""
+description = "A bot which holds your beer"
 licence = "AGPLv3+"
 licence_file = "LICENSE"
-homepage = ""
-repository = ""
+homepage = "https://gitlab.com/slondr/BeerHolderBot"
+repository = "https://gitlab.com/slondr/BeerHolderBot"
 documentation = ""
 
 [dependencies]
