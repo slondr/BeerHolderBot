@@ -26,6 +26,10 @@ lazy_static! {
     static ref BEERS: AtomicU64 = AtomicU64::new(0);
 }
 
+//// TO IMPLEMENT A NEW COMMAND
+// Add the command name to the Command enum with a description
+// Implement the logic of the command in the match statement in answer()
+
 #[derive(BotCommand)]
 #[command(rename = "lowercase", description = "These commands are supported:")]
 enum Command {
@@ -34,19 +38,50 @@ enum Command {
     #[command(description = "Hold a beer")]
     Beer(String),
     #[command(description = "See what's on tap")]
-    OnTap
+    OnTap,
+    #[command(description = "Drink a beer by index")]
+    Quaff(String)
 }
 
 async fn answer(cx: UpdateWithCx<Message>, command: Command) -> ResponseResult<()> {
     match command {
 	Command::Help => cx.answer(Command::descriptions()).send().await?,
 	Command::Beer(b) => {
+	    log::info!("Adding {} to list of beers", b);
 	    let prev = BEERS.fetch_add(1, Ordering::Relaxed);
 	    TAP.lock().await.push(b);
 	    cx.answer_str(format!("Currently holding {} beers", prev + 1)).await?
 	},
         Command::OnTap => {
-	    cx.answer_str(TAP.lock().await.join("\n")).await?
+	    log::info!("Printing list of beers");
+	    let mut m: String = String::new();
+	    for (i, b) in TAP.lock().await.iter().enumerate() {
+		m += format!("[{}] {}\n", i, b).as_str();
+	    }
+	    cx.answer_str(m.as_str()).await?
+	},
+	Command::Quaff(beer) => {
+	    log::info!("Quaffing beer #{}", beer);
+	    // try to parse the user input as a usize
+	    if let Ok(index) = beer.parse::<usize>() {
+		let tap_lock = TAP.lock().await;
+		if let Some(quaffed_beer) = tap_lock.get(index) {
+		    let quaffed_beer = quaffed_beer.to_string();
+		    drop(tap_lock);
+		    let mut tap_lock = TAP.lock().await;
+		    tap_lock.remove(index);
+		    
+		    // reduce the beer counter by 1
+		    let _ = BEERS.fetch_sub(1, Ordering::Relaxed);
+		    
+		    // post a message informing the operation was successful
+		    cx.answer_str(format!("You have quaffed \"{}\"", quaffed_beer)).await?		    
+		} else {
+		    cx.answer_str("Sorry, we don't have that beer on tap.").await?
+		}
+	    } else {
+		cx.answer_str("Sorry, we don't have that beer on tap.").await?
+	    }
 	}
     };
 
