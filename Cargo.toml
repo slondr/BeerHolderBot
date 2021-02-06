@@ -6,6 +6,10 @@ edition = "2018"
 description = ""
 licence = "AGPLv3+"
 licence_file = "LICENSE"
+homepage = ""
+repository = ""
+documentation = ""
+
 [dependencies]
 teloxide = "0.3"
 teloxide-macros = "0.3"
