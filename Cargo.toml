@@ -8,7 +8,7 @@ license = "AGPLv3+"
 license_file = "LICENSE"
 homepage = "https://gitlab.com/slondr/BeerHolderBot"
 repository = "https://gitlab.com/slondr/BeerHolderBot"
-documentation = ""
+documentation = "https://gitlab.com/slondr/BeerHolderBot/-/blob/master/Readme.org"
 
 [dependencies]
 teloxide = "0.3"
