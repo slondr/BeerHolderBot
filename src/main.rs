@@ -47,10 +47,15 @@ async fn answer(cx: UpdateWithCx<Message>, command: Command) -> ResponseResult<(
     match command {
 	Command::Help => cx.answer(Command::descriptions()).send().await?,
 	Command::Beer(b) => {
-	    log::info!("Adding {} to list of beers", b);
-	    let cur = BEERS.fetch_add(1, Ordering::Relaxed) + 1;
-	    TAP.lock().await.push(b);
-	    cx.answer_str(format!("Currently holding {} beer{}", cur, if cur == 1 { "" } else { "s" })).await?
+	    if b != "" {
+		log::info!("Adding {} to list of beers", b);
+		let cur = BEERS.fetch_add(1, Ordering::Relaxed) + 1;
+		TAP.lock().await.push(b);
+		cx.answer_str(format!("Currently holding {} beer{}", cur, if cur == 1 { "" } else { "s" })).await?
+	    } else {
+		// the given beer was an empty string, so don't actually store it
+		cx.answer_str("Sorry, I can't hold that beer.").await?
+	    }
 	},
         Command::OnTap => {
 	    log::info!("Printing list of beers");
