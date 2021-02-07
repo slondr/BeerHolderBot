@@ -48,9 +48,9 @@ async fn answer(cx: UpdateWithCx<Message>, command: Command) -> ResponseResult<(
 	Command::Help => cx.answer(Command::descriptions()).send().await?,
 	Command::Beer(b) => {
 	    log::info!("Adding {} to list of beers", b);
-	    let prev = BEERS.fetch_add(1, Ordering::Relaxed);
+	    let cur = BEERS.fetch_add(1, Ordering::Relaxed) + 1;
 	    TAP.lock().await.push(b);
-	    cx.answer_str(format!("Currently holding {} beers", prev + 1)).await?
+	    cx.answer_str(format!("Currently holding {} beer{}", cur, if cur == 1 { "" } else { "s" })).await?
 	},
         Command::OnTap => {
 	    log::info!("Printing list of beers");
