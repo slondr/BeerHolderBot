@@ -51,10 +51,14 @@ async fn answer(cx: UpdateWithCx<Message>, command: Command) -> ResponseResult<(
 		log::info!("Adding {} to list of beers", b);
 		let cur = BEERS.fetch_add(1, Ordering::Relaxed) + 1;
 		TAP.lock().await.push(b);
-		cx.answer_str(format!("Currently holding {} beer{}", cur, if cur == 1 { "" } else { "s" })).await?
+		cx.reply_to(format!("Currently holding {} beer{}", cur, if cur == 1 { "" } else { "s" }))
+		    .send()
+		    .await?
 	    } else {
 		// the given beer was an empty string, so don't actually store it
-		cx.answer_str("Sorry, I can't hold that beer.").await?
+		cx.reply_to("Sorry, I can't hold that beer.")
+		    .send()
+		    .await?
 	    }
 	},
         Command::OnTap => {
@@ -63,7 +67,7 @@ async fn answer(cx: UpdateWithCx<Message>, command: Command) -> ResponseResult<(
 	    for (i, b) in TAP.lock().await.iter().enumerate() {
 		m += format!("[{}] {}\n", i, b).as_str();
 	    }
-	    cx.answer_str(m.as_str()).await?
+	    cx.reply_to(m.as_str()).send().await?
 	},
 	Command::Quaff(beer) => {
 	    log::info!("Quaffing beer #{}", beer);
@@ -80,12 +84,12 @@ async fn answer(cx: UpdateWithCx<Message>, command: Command) -> ResponseResult<(
 		    let _ = BEERS.fetch_sub(1, Ordering::Relaxed);
 		    
 		    // post a message informing the operation was successful
-		    cx.answer_str(format!("You have quaffed \"{}\"", quaffed_beer)).await?		    
+		    cx.reply_to(format!("You have quaffed \"{}\"", quaffed_beer)).send().await?		    
 		} else {
-		    cx.answer_str("Sorry, we don't have that beer on tap.").await?
+		    cx.reply_to("Sorry, we don't have that beer on tap.").send().await?
 		}
 	    } else {
-		cx.answer_str("Sorry, we don't have that beer on tap.").await?
+		cx.reply_to("Sorry, we don't have that beer on tap.").send().await?
 	    }
 	}
     };
