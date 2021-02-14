@@ -63,11 +63,16 @@ async fn answer(cx: UpdateWithCx<Message>, command: Command) -> ResponseResult<(
 	},
         Command::OnTap => {
 	    log::info!("Printing list of beers");
-	    let mut m: String = String::new();
-	    for (i, b) in TAP.lock().await.iter().enumerate() {
-		m += format!("[{}] {}\n", i, b).as_str();
+	    // if the tap is empty, print a special message so the Telegram API doesn't freak out
+	    if TAP.lock().await.len() == 0 {
+		cx.reply_to("Sorry, I'm all empty.").send().await?
+	    } else {
+		let mut m: String = String::new();
+		for (i, b) in TAP.lock().await.iter().enumerate() {
+		    m += format!("[{}] {}\n", i, b).as_str();
+		}
+		cx.reply_to(m.as_str()).send().await?
 	    }
-	    cx.reply_to(m.as_str()).send().await?
 	},
 	Command::Quaff(beer) => {
 	    log::info!("Quaffing beer #{}", beer);
