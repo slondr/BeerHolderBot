@@ -13,4 +13,4 @@ A bot that holds your beer
 * Building & Running
 This project is managed with Cargo, so just build it with =cargo build= and whatever flags you want.
 
-To run it, grab an API token from ~@BotFather~ on Telegram, and store it in an environment variable called =TELOXIDE_TOKEN=. Then just `cargo run` or execute the binary directly.
+To run it, grab an API token from ~@BotFather~ on Telegram, and store it in an environment variable called =TELOXIDE_TOKEN=. Then just =cargo run= or execute the binary directly.
