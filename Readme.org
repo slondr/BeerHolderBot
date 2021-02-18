@@ -1,2 +1,11 @@
 #+title: BeerHolderBot
 A bot that holds your beer
+* Commands
+- =/beer <text>=
+
+  Ask the bot to hold your beer. The text you give it will be associated with that beer in the future.
+- =/ontap=
+
+  See what's on tap.
+- =/quaff <number>=
+  Drink the beer with the given number. Numbers will be displayed by the =/ontap= command.
