@@ -1,0 +1,6 @@
+* 0.2.1
++ Fixed a bug where /ontap would return nothing and throw an error in the console if the tap was empty.
+* 0.2.0
++ Bot now replies to the message used to issue commands to it, pinging the user in the process.
+* 0.1.0
+Basic featureset implement: Storing, displaying, and quaffing beers
