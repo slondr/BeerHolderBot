@@ -1,3 +1,5 @@
+* 0.3.0
++ Revamped the README to actually include relevant documentation
 * 0.2.1
 + Fixed a bug where /ontap would return nothing and throw an error in the console if the tap was empty.
 * 0.2.0
