@@ -33,18 +33,18 @@ lazy_static! {
     static ref CONNECTION: Mutex<sqlite::Connection> = Mutex::new(sqlite::open("tap.db").unwrap());
 }
 
-async fn initialize_database() -> Result<&'static str, Box<dyn std::error::Error>> {
+async fn initialize_database() -> Result<(), Box<dyn std::error::Error>> {
     CONNECTION.lock().await.execute("CREATE TABLE IF NOT EXISTS tap (
       id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
       chat_id INTEGER NOT NULL,
       text TEXT)")?;
-    Ok("success")
+    Ok(())
 }
 
-async fn create_beer(chat_id: i64, content: String) -> Result<&'static str, Box<dyn Error>> {
+async fn create_beer(chat_id: i64, content: String) -> Result<(), Box<dyn Error>> {
     CONNECTION.lock().await
 	.execute(format!("INSERT INTO tap (chat_id, text) VALUES ('{}', '{}')", chat_id, content))?;
-    Ok("success")
+    Ok(())
 }
 
 async fn get_all_beers(chat_id: i64) -> Result<Vec<Beer>, Box<dyn Error>> {
@@ -58,6 +58,19 @@ async fn get_all_beers(chat_id: i64) -> Result<Vec<Beer>, Box<dyn Error>> {
 	});
     }
     Ok(beers)
+}
+
+async fn quaff(id: i64) -> Result<String, Box<dyn Error>> {
+    let c = CONNECTION.lock().await;
+    let mut statement = c.prepare(format!("SELECT text FROM tap WHERE id={}", id))?;
+    if let sqlite::State::Row = statement.next()?  {
+	let text = statement.read::<String>(0)?;
+	// remove the beer from the database
+	c.execute(format!("DELETE FROM tap WHERE id={}", id))?;
+	Ok(text)
+    } else {
+	Err("could not retrieve beer text")?
+    }
 }
 
 //// TO IMPLEMENT A NEW COMMAND
