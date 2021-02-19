@@ -1,5 +1,6 @@
 #+title: BeerHolderBot
-A bot that holds your beer
+A Telegram bot that holds your beer
+#+html: <img alt="Crates.io" src="https://img.shields.io/crates/d/BeerHolderBot?style=for-the-badge"></img>
 * Commands
 - =/beer <text>=
 
@@ -8,4 +9,9 @@ A bot that holds your beer
 
   See what's on tap.
 - =/quaff <number>=
+  
   Drink the beer with the given number. Numbers will be displayed by the =/ontap= command.
+* Building & Running
+This project is managed with Cargo, so just build it with =cargo build= and whatever flags you want.
+
+To run it, grab an API token from ~@BotFather~ on Telegram, and store it in an environment variable called =TELOXIDE_TOKEN=. Then just =cargo run= or execute the binary directly.
