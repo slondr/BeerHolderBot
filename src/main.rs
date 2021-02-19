@@ -151,12 +151,23 @@ async fn answer(cx: UpdateWithCx<Message>, command: Command) -> ResponseResult<(
 
 async fn run() {
     teloxide::enable_logging!();
-    log::info!("Starting BeerHolderBot");
+
+    log::info!("Initializing database");
+
+    // connect to database
+    let init_db = initialize_database();
     
+    log::info!("Starting BeerHolderBot");
+
+    // use the TELOXIDE_TOKEN environment variable for the Telegram API
     let bot = Bot::from_env();
 
     let bot_name = "BeerHolderBot";
-    
+
+    // make sure the database opened correctly before spawning the bot repl
+    init_db.await.expect("Could not initialize database");
+
+    // start the bot
     teloxide::commands_repl(bot, bot_name, answer).await;
 }
 
