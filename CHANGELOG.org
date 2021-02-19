@@ -1,3 +1,4 @@
+* 0.3.1
 * 0.3.0
 + Implemented persistent storage using SQLite
   - Rebooting the bot no longer wipes the database
