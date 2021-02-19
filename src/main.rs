@@ -41,13 +41,13 @@ async fn initialize_database() -> Result<(), Box<dyn std::error::Error>> {
     Ok(())
 }
 
-async fn create_beer(chat_id: i64, content: String) -> Result<(), Box<dyn Error + Send>> {
+async fn create_beer(chat_id: i64, content: String) -> Result<(), Box<dyn Error + Send + Sync>> {
     CONNECTION.lock().await
 	.execute(format!("INSERT INTO tap (chat_id, text) VALUES ('{}', '{}')", chat_id, content))?;
     Ok(())
 }
 
-async fn get_all_beers(chat_id: i64) -> Result<Vec<Beer>, Box<dyn Error>> {
+async fn get_all_beers(chat_id: i64) -> Result<Vec<Beer>, Box<dyn Error + Send + Sync>> {
     let mut beers: Vec<Beer> = Vec::new();
     let c =  CONNECTION.lock().await;
     let mut statement = c.prepare(format!("SELECT id, text FROM tap WHERE chat_id={}", chat_id))?;
@@ -60,7 +60,7 @@ async fn get_all_beers(chat_id: i64) -> Result<Vec<Beer>, Box<dyn Error>> {
     Ok(beers)
 }
 
-async fn quaff(id: i64) -> Result<String, Box<dyn Error>> {
+async fn quaff(id: i64) -> Result<String, Box<dyn Error + Send + Sync>> {
     let c = CONNECTION.lock().await;
     let mut statement = c.prepare(format!("SELECT text FROM tap WHERE id={}", id))?;
     if let sqlite::State::Row = statement.next()?  {
@@ -98,25 +98,19 @@ async fn answer(cx: UpdateWithCx<Message>, command: Command) -> ResponseResult<(
 		log::info!("Adding {} to list of beers", b);
 		// add the beer to the database
 		match create_beer(cx.chat_id(), b).await {
+		    Err(e) => cx.reply_to(format!("Er, something went wrong.\n{}", e)).send().await?,
 		    Ok(_) => {
 			// increment the global beer counter
 			let cur = BEERS.fetch_add(1, Ordering::Relaxed) + 1;
-			
+			// respond with how many beers are held (globally)
 			cx.reply_to(format!("Currently holding {} beer{}", cur, if cur == 1 { "" } else { "s" }))
-			    .send()
-			    .await?
-			
-		    },
-		    Err(e) => {
-			cx.reply_to(format!("Er, something went wrong.\n{}", e)).send().await?
+			    .send().await?
 		    }
-		    
+
 		}
 	    } else {
 		// the given beer was an empty string, so don't actually store it
-		cx.reply_to("Sorry, I can't hold that beer.")
-		    .send()
-		    .await?
+		cx.reply_to("Sorry, I can't hold that beer.").send().await?
 	    }
 	},
         Command::OnTap => {
