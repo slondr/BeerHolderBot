@@ -134,29 +134,32 @@ async fn answer(cx: UpdateWithCx<Message>, command: Command) -> ResponseResult<(
 	},
 	Command::Quaff(beer) => {
 	    log::info!("Quaffing beer #{}", beer);
-	    // try to parse the user input as a usize
-	    if let Ok(index) = beer.parse::<usize>() {
-		let tap_lock = TAP.lock().await;
+	    // try to parse the user input as an integer
+	    if let Ok(index) = beer.parse::<i64>() {
+/*		let tap_lock = TAP.lock().await;
 		if let Some(quaffed_beer) = tap_lock.get(index) {
 		    let quaffed_beer = quaffed_beer.to_string();
 		    drop(tap_lock);
 		    let mut tap_lock = TAP.lock().await;
 		    tap_lock.remove(index);
-		    
-		    // reduce the beer counter by 1
-		    let _ = BEERS.fetch_sub(1, Ordering::Relaxed);
-		    
-		    // post a message informing the operation was successful
-		    cx.reply_to(format!("You have quaffed \"{}\"", quaffed_beer)).send().await?		    
-		} else {
-		    cx.reply_to("Sorry, we don't have that beer on tap.").send().await?
+		 */
+		let quaff_attempt = quaff(index);
+
+		match quaff_attempt.await {
+		    Err(e) => cx.reply_to(format!("Sorry, we can't do that.\n{}", e)).send().await?,
+		    Ok(m) => {
+			// reduce the global beer counter
+			let _ = BEERS.fetch_sub(1, Ordering::Relaxed);
+			// send a message informing which beer was quaffed
+			cx.reply_to(format!("You have quaffed \"{}\"", m)).send().await?
+		    }
 		}
 	    } else {
 		cx.reply_to("Sorry, we don't have that beer on tap.").send().await?
 	    }
 	}
     };
-
+    
     Ok(())
 }
 
