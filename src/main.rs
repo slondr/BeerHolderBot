@@ -119,11 +119,17 @@ async fn answer(cx: UpdateWithCx<Message>, command: Command) -> ResponseResult<(
 	    if TAP.lock().await.len() == 0 {
 		cx.reply_to("Sorry, I'm all empty.").send().await?
 	    } else {
-		let mut m: String = String::new();
-		for (i, b) in TAP.lock().await.iter().enumerate() {
-		    m += format!("[{}] {}\n", i, b).as_str();
-		}
-		cx.reply_to(m.as_str()).send().await?
+
+		match get_all_beers(cx.chat_id()).await {
+		    Err(e) => cx.reply_to(format!("Uh, something went wrong.\n{}", e)).send().await?,
+		    Ok(beers) => {
+			let mut m: String = String::new();
+			for beer in beers {
+			    m += format!("[{}] {}\n", beer.id, beer.text).as_str();
+			}
+			cx.reply_to(m.as_str()).send().await?
+		    }
+		}		
 	    }
 	},
 	Command::Quaff(beer) => {
