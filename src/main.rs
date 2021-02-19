@@ -20,10 +20,44 @@ use teloxide::{prelude::*, utils::command::BotCommand};
 use tokio::sync::Mutex;
 use std::sync::atomic::{AtomicU64, Ordering};
 use lazy_static::lazy_static;
+use std::error::Error;
+
+struct Beer {
+    id: i64,
+    text: String
+}
 
 lazy_static! {
     static ref TAP: Mutex<Vec<String>> = Mutex::new(Vec::new());
     static ref BEERS: AtomicU64 = AtomicU64::new(0);
+    static ref CONNECTION: Mutex<sqlite::Connection> = Mutex::new(sqlite::open("tap.db").unwrap());
+}
+
+async fn initialize_database() -> Result<&'static str, Box<dyn std::error::Error>> {
+    CONNECTION.lock().await.execute("CREATE TABLE IF NOT EXISTS tap (
+      id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+      chat_id INTEGER NOT NULL,
+      text TEXT)")?;
+    Ok("success")
+}
+
+async fn create_beer(chat_id: i64, content: String) -> Result<&'static str, Box<dyn Error>> {
+    CONNECTION.lock().await
+	.execute(format!("INSERT INTO tap (chat_id, text) VALUES ('{}', '{}')", chat_id, content))?;
+    Ok("success")
+}
+
+async fn get_all_beers(chat_id: i64) -> Result<Vec<Beer>, Box<dyn Error>> {
+    let mut beers: Vec<Beer> = Vec::new();
+    let c =  CONNECTION.lock().await;
+    let mut statement = c.prepare(format!("SELECT id, text FROM tap WHERE chat_id={}", chat_id))?;
+    while let sqlite::State::Row = statement.next().unwrap() {
+	beers.push(Beer {
+	    id: statement.read::<i64>(0)?,
+	    text: statement.read::<String>(1)?
+	});
+    }
+    Ok(beers)
 }
 
 //// TO IMPLEMENT A NEW COMMAND
