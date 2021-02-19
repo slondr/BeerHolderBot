@@ -1,4 +1,7 @@
 * 0.3.0
++ Implemented persistent storage using SQLite
+  - Rebooting the bot no longer wipes the database
++ The =/ontap= command now only shows you beers which were added by the chat you posted the command in
 + Revamped the README to actually include relevant documentation
 * 0.2.1
 + Fixed a bug where /ontap would return nothing and throw an error in the console if the tap was empty.
