@@ -41,7 +41,7 @@ async fn initialize_database() -> Result<(), Box<dyn std::error::Error>> {
     Ok(())
 }
 
-async fn create_beer(chat_id: i64, content: String) -> Result<(), Box<dyn Error>> {
+async fn create_beer(chat_id: i64, content: String) -> Result<(), Box<dyn Error + Send>> {
     CONNECTION.lock().await
 	.execute(format!("INSERT INTO tap (chat_id, text) VALUES ('{}', '{}')", chat_id, content))?;
     Ok(())
@@ -96,11 +96,22 @@ async fn answer(cx: UpdateWithCx<Message>, command: Command) -> ResponseResult<(
 	Command::Beer(b) => {
 	    if b != "" {
 		log::info!("Adding {} to list of beers", b);
-		let cur = BEERS.fetch_add(1, Ordering::Relaxed) + 1;
-		TAP.lock().await.push(b);
-		cx.reply_to(format!("Currently holding {} beer{}", cur, if cur == 1 { "" } else { "s" }))
-		    .send()
-		    .await?
+		// add the beer to the database
+		match create_beer(cx.chat_id(), b).await {
+		    Ok(_) => {
+			// increment the global beer counter
+			let cur = BEERS.fetch_add(1, Ordering::Relaxed) + 1;
+			
+			cx.reply_to(format!("Currently holding {} beer{}", cur, if cur == 1 { "" } else { "s" }))
+			    .send()
+			    .await?
+			
+		    },
+		    Err(e) => {
+			cx.reply_to(format!("Er, something went wrong.\n{}", e)).send().await?
+		    }
+		    
+		}
 	    } else {
 		// the given beer was an empty string, so don't actually store it
 		cx.reply_to("Sorry, I can't hold that beer.")
