@@ -1,5 +1,6 @@
 #+title: BeerHolderBot
 A bot that holds your beer
+#+html: <img alt="Crates.io" src="https://img.shields.io/crates/d/BeerHolderBot?style=for-the-badge"></img>
 * Commands
 - =/beer <text>=
 
