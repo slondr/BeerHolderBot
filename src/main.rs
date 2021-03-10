@@ -87,7 +87,9 @@ enum Command {
     #[command(description = "See what's on tap")]
     OnTap,
     #[command(description = "Drink a beer by index")]
-    Quaff(String)
+    Quaff(String),
+    #[command(description = "Harvest corn")]
+    Corn
 }
 
 async fn answer(cx: UpdateWithCx<Message>, command: Command) -> ResponseResult<()> {
@@ -156,6 +158,9 @@ async fn answer(cx: UpdateWithCx<Message>, command: Command) -> ResponseResult<(
 	    } else {
 		cx.reply_to("Sorry, we don't have that beer on tap.").send().await?
 	    }
+	},
+	Command::Corn => {
+	    // TODO: harvest corn
 	}
     };
     
