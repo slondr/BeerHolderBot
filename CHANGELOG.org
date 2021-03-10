@@ -1,5 +1,5 @@
 * 0.3.2
-
++ Added documentation for =/corn= to the Readme
 * 0.3.1
 + Implemented =/corn= command
 * 0.3.0
