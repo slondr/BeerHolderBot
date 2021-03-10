@@ -6,5 +6,6 @@ stages:
 build:
   stage: build
   script:
+    - apk add openssl openssl-dev
     - cargo build
 
