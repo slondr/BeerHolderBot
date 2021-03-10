@@ -17,4 +17,5 @@ pretty_env_logger = "0.4.0"
 tokio = { version =  "0.2.11", features = ["rt-threaded", "macros", "sync"] }
 lazy_static = "1.4.0"
 sqlite = "0.25.3"
-reqwest = "0.11.2"
+reqwest = "0.10.10"
+json = "0.12.4"

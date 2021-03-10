@@ -14,6 +14,7 @@
     // You should have received a copy of the GNU Affero General Public License
     // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+#![allow(non_snake_case)]
 
 
 use teloxide::{prelude::*, utils::command::BotCommand};
@@ -70,6 +71,21 @@ async fn quaff(id: i64) -> Result<String, Box<dyn Error + Send + Sync>> {
 	Ok(text)
     } else {
 	Err("could not retrieve beer text")?
+    }
+}
+
+async fn harvest_corn() -> Result<String, Box<dyn Error + Send + Sync>> {
+    if let Some(access) = std::env::var_os("UNSPLASH_ACCESS") {
+	// call API to get a random picture of corn
+	let auth_uri = format!("https://api.unsplash.com/photos/random/?client_id={}&query={}", access.into_string().unwrap(), "corn");
+	let response = reqwest::get(&auth_uri)
+	    .await.unwrap().text().await.unwrap();
+	// response format is some pretty nested json
+	let parsed_response = json::parse(&response);
+	let img_url = &parsed_response.unwrap()["urls"]["raw"];
+	Ok(img_url.to_string())
+    } else {
+	Err("You don't have a farm.")?
     }
 }
 
@@ -161,17 +177,12 @@ async fn answer(cx: UpdateWithCx<Message>, command: Command) -> ResponseResult<(
 	},
 	Command::Corn => {
 	    // harvest corn
-	    // First, get the Unsplash access keyfrom the environment
-	    match std::env::var_os("UNSPLASH_ACCESS") {
-		Some(access) => {
-		    // call API to get a random picture of corn
-		    let auth_uri = format!("https://api.unsplash.com/photos/random/?client_id={}&query={}", access.into_string().unwrap(), "corn");
-		    let response = reqwest::get(auth_uri)
-			.await.unwrap().text().await.unwrap();
-		    cx.reply_to(response).send().await?
-		    
-		},
-		None => cx.reply_to("Sorry, you don't have a corn farm.").send().await?
+	    log::info!("Harvesting corn");
+	    if let Ok(corn) = harvest_corn().await {
+		cx.reply_to(corn).send().await?
+	    } else {
+		log::error!("An error occurred within harvest_corn()");
+		cx.reply_to("You don't have a farm.").send().await?
 	    }
 	}
     };
