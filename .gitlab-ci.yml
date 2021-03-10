@@ -1,4 +1,4 @@
-image: rust:alpine
+image: rust
 
 stages:
   - build
@@ -6,6 +6,5 @@ stages:
 build:
   stage: build
   script:
-    - apk add openssl openssl-dev
     - cargo build
 
