@@ -1,6 +1,6 @@
 [package]
 name = "BeerHolderBot"
-version = "0.3.1"
+version = "0.3.2"
 authors = ["Eric S. Londres <elondres@stevens.edu>"]
 edition = "2018"
 description = "A Telegram bot which holds your beer"
