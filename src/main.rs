@@ -87,7 +87,9 @@ enum Command {
     #[command(description = "See what's on tap")]
     OnTap,
     #[command(description = "Drink a beer by index")]
-    Quaff(String)
+    Quaff(String),
+    #[command(description = "Harvest corn")]
+    Corn
 }
 
 async fn answer(cx: UpdateWithCx<Message>, command: Command) -> ResponseResult<()> {
@@ -155,6 +157,21 @@ async fn answer(cx: UpdateWithCx<Message>, command: Command) -> ResponseResult<(
 		}
 	    } else {
 		cx.reply_to("Sorry, we don't have that beer on tap.").send().await?
+	    }
+	},
+	Command::Corn => {
+	    // harvest corn
+	    // First, get the Unsplash access keyfrom the environment
+	    match std::env::var_os("UNSPLASH_ACCESS") {
+		Some(access) => {
+		    // call API to get a random picture of corn
+		    let auth_uri = format!("https://api.unsplash.com/photos/random/?client_id={}&query={}", access.into_string().unwrap(), "corn");
+		    let response = reqwest::get(auth_uri)
+			.await.unwrap().text().await.unwrap();
+		    cx.reply_to(response).send().await?
+		    
+		},
+		None => cx.reply_to("Sorry, you don't have a corn farm.").send().await?
 	    }
 	}
     };

@@ -1,9 +1,9 @@
 [package]
 name = "BeerHolderBot"
-version = "0.2.1"
+version = "0.3.1"
 authors = ["Eric S. Londres <elondres@stevens.edu>"]
 edition = "2018"
-description = "A bot which holds your beer"
+description = "A Telegram bot which holds your beer"
 license = "AGPL-3.0-or-later"
 homepage = "https://gitlab.com/slondr/BeerHolderBot"
 repository = "https://gitlab.com/slondr/BeerHolderBot"
@@ -17,3 +17,4 @@ pretty_env_logger = "0.4.0"
 tokio = { version =  "0.2.11", features = ["rt-threaded", "macros", "sync"] }
 lazy_static = "1.4.0"
 sqlite = "0.25.3"
+reqwest = "0.11.2"

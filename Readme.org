@@ -1,6 +1,6 @@
 #+title: BeerHolderBot
 A Telegram bot that holds your beer
-#+html: <img alt="Crates.io" src="https://img.shields.io/crates/d/BeerHolderBot?style=for-the-badge"></img>
+#+html: <a href="https://crates.io/crates/BeerHolderBot"><img alt="Crates.io" src="https://img.shields.io/crates/d/BeerHolderBot?style=for-the-badge"></img></a>
 * Commands
 - =/beer <text>=
 
