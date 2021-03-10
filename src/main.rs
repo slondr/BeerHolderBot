@@ -73,6 +73,21 @@ async fn quaff(id: i64) -> Result<String, Box<dyn Error + Send + Sync>> {
     }
 }
 
+async fn harvest_corn() -> Result<String, Box<dyn Error + Send + Sync>> {
+    match std::env::var_os("UNSPLASH_ACCESS") {
+	Some(access) => {
+	    // call API to get a random picture of corn
+	    let auth_uri = format!("https://api.unsplash.com/photos/random/?client_id={}&query={}", access.into_string().unwrap(), "corn");
+	    let response = reqwest::get(auth_uri)
+		.await.unwrap().text().await.unwrap();
+	    Ok(response)
+	},
+	None => {
+	    Err("You don't have a farm.")?
+	}
+    }
+}
+
 //// TO IMPLEMENT A NEW COMMAND
 // Add the command name to the Command enum with a description
 // Implement the logic of the command in the match statement in answer()
@@ -161,17 +176,11 @@ async fn answer(cx: UpdateWithCx<Message>, command: Command) -> ResponseResult<(
 	},
 	Command::Corn => {
 	    // harvest corn
-	    // First, get the Unsplash access keyfrom the environment
-	    match std::env::var_os("UNSPLASH_ACCESS") {
-		Some(access) => {
-		    // call API to get a random picture of corn
-		    let auth_uri = format!("https://api.unsplash.com/photos/random/?client_id={}&query={}", access.into_string().unwrap(), "corn");
-		    let response = reqwest::get(auth_uri)
-			.await.unwrap().text().await.unwrap();
-		    cx.reply_to(response).send().await?
-		    
-		},
-		None => cx.reply_to("Sorry, you don't have a corn farm.").send().await?
+	    if let Ok(corn) = harvest_corn().await {
+		cx.reply_to(corn).send().await?
+	    } else {
+		log::error!("An error occurred within harvest_corn()");
+		cx.reply_to("You don't have a farm.").send().await?
 	    }
 	}
     };
