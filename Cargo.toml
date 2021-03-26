@@ -10,7 +10,7 @@ repository = "https://gitlab.com/slondr/BeerHolderBot"
 documentation = "https://gitlab.com/slondr/BeerHolderBot/-/blob/master/Readme.org"
 
 [dependencies]
-teloxide = "0.4"
+teloxide = { version = "0.4", features = ["macros"] }
 teloxide-macros = "0.4"
 log = "0.4"
 pretty_env_logger = "0.4"
