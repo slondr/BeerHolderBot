@@ -16,8 +16,7 @@
 
 #![allow(non_snake_case)]
 
-use teloxide_core::Bot;
-use teloxide::{prelude::*, prelude::AutoSend, utils::command::BotCommand, requests::ResponseResult};
+use teloxide::{prelude::*, utils::command::BotCommand, requests::ResponseResult};
 use tokio::sync::Mutex;
 use std::sync::atomic::{AtomicU64, Ordering};
 use lazy_static::lazy_static;

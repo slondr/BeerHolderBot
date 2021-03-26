@@ -4,7 +4,7 @@ version = 3
 
 [[package]]
 name = "BeerHolderBot"
-version = "0.3.2"
+version = "0.3.3"
 dependencies = [
  "json",
  "lazy_static",
@@ -13,7 +13,6 @@ dependencies = [
  "reqwest 0.10.10",
  "sqlite",
  "teloxide",
- "teloxide-core",
  "teloxide-macros",
  "tokio 1.4.0",
 ]
