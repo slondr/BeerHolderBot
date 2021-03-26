@@ -16,8 +16,8 @@
 
 #![allow(non_snake_case)]
 
-
-use teloxide::{prelude::*, utils::command::BotCommand};
+use teloxide_core::Bot;
+use teloxide::{prelude::*, prelude::AutoSend, utils::command::BotCommand, requests::ResponseResult};
 use tokio::sync::Mutex;
 use std::sync::atomic::{AtomicU64, Ordering};
 use lazy_static::lazy_static;
@@ -108,43 +108,43 @@ enum Command {
     Corn
 }
 
-async fn answer(cx: UpdateWithCx<Message>, command: Command) -> ResponseResult<()> {
+async fn answer(cx: UpdateWithCx<AutoSend<Bot>, Message>, command: Command) -> ResponseResult<()> {
     match command {
-	Command::Help => cx.answer(Command::descriptions()).send().await?,
+	Command::Help => cx.answer(Command::descriptions()).await?,
 	Command::Beer(b) => {
 	    if b != "" {
 		log::info!("Adding {} to list of beers", b);
 		// add the beer to the database
 		match create_beer(cx.chat_id(), b).await {
-		    Err(e) => cx.reply_to(format!("Er, something went wrong.\n{}", e)).send().await?,
+		    Err(e) => cx.reply_to(format!("Er, something went wrong.\n{}", e)).await?,
 		    Ok(_) => {
 			// increment the global beer counter
 			let cur = BEERS.fetch_add(1, Ordering::Relaxed) + 1;
 			// respond with how many beers are held (globally)
 			cx.reply_to(format!("Currently holding {} beer{}", cur, if cur == 1 { "" } else { "s" }))
-			    .send().await?
+			    .await?
 		    }
 
 		}
 	    } else {
 		// the given beer was an empty string, so don't actually store it
-		cx.reply_to("Sorry, I can't hold that beer.").send().await?
+		cx.reply_to("Sorry, I can't hold that beer.").await?
 	    }
 	},
         Command::OnTap => {
 	    log::info!("Printing list of beers");
 	    // if the tap is empty, print a special message so the Telegram API doesn't freak out
 	    match get_all_beers(cx.chat_id()).await {
-		Err(e) => cx.reply_to(format!("Uh, something went wrong.\n{}", e)).send().await?,
+		Err(e) => cx.reply_to(format!("Uh, something went wrong.\n{}", e)).await?,
 		Ok(beers) => {
 		    let mut m: String = String::new();
 		    if beers.len() == 0 {
-			cx.reply_to("Sorry, I'm all empty.").send().await?
+			cx.reply_to("Sorry, I'm all empty.").await?
 		    } else {
 			for beer in beers {
 			    m += format!("[{}] {}\n", beer.id, beer.text).as_str();
 			}
-			cx.reply_to(m.as_str()).send().await?
+			cx.reply_to(m.as_str()).await?
 		    }
 		}
 	    }
@@ -163,26 +163,26 @@ async fn answer(cx: UpdateWithCx<Message>, command: Command) -> ResponseResult<(
 		let quaff_attempt = quaff(index);
 
 		match quaff_attempt.await {
-		    Err(e) => cx.reply_to(format!("Sorry, we can't do that.\n{}", e)).send().await?,
+		    Err(e) => cx.reply_to(format!("Sorry, we can't do that.\n{}", e)).await?,
 		    Ok(m) => {
 			// reduce the global beer counter
 			let _ = BEERS.fetch_sub(1, Ordering::Relaxed);
 			// send a message informing which beer was quaffed
-			cx.reply_to(format!("You have quaffed \"{}\"", m)).send().await?
+			cx.reply_to(format!("You have quaffed \"{}\"", m)).await?
 		    }
 		}
 	    } else {
-		cx.reply_to("Sorry, we don't have that beer on tap.").send().await?
+		cx.reply_to("Sorry, we don't have that beer on tap.").await?
 	    }
 	},
 	Command::Corn => {
 	    // harvest corn
 	    log::info!("Harvesting corn");
 	    if let Ok(corn) = harvest_corn().await {
-		cx.reply_to(corn).send().await?
+		cx.reply_to(corn).await?
 	    } else {
 		log::error!("An error occurred within harvest_corn()");
-		cx.reply_to("You don't have a farm.").send().await?
+		cx.reply_to("You don't have a farm.").await?
 	    }
 	}
     };
@@ -201,7 +201,7 @@ async fn run() {
     log::info!("Starting BeerHolderBot");
 
     // use the TELOXIDE_TOKEN environment variable for the Telegram API
-    let bot = Bot::from_env();
+    let bot = Bot::from_env().auto_send();
 
     let bot_name = "BeerHolderBot";
 
