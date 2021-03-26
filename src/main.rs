@@ -16,8 +16,8 @@
 
 #![allow(non_snake_case)]
 
-
-use teloxide::{prelude::*, utils::command::BotCommand};
+use teloxide_core::Bot;
+use teloxide::{prelude::*, prelude::AutoSend, utils::command::BotCommand, requests::ResponseResult};
 use tokio::sync::Mutex;
 use std::sync::atomic::{AtomicU64, Ordering};
 use lazy_static::lazy_static;
@@ -108,7 +108,7 @@ enum Command {
     Corn
 }
 
-async fn answer(cx: UpdateWithCx<Message>, command: Command) -> ResponseResult<()> {
+async fn answer(cx: UpdateWithCx<AutoSend<Bot>, Message>, command: Command) -> ResponseResult<()> {
     match command {
 	Command::Help => cx.answer(Command::descriptions()).send().await?,
 	Command::Beer(b) => {
@@ -201,7 +201,7 @@ async fn run() {
     log::info!("Starting BeerHolderBot");
 
     // use the TELOXIDE_TOKEN environment variable for the Telegram API
-    let bot = Bot::from_env();
+    let bot = Bot::from_env().auto_send();
 
     let bot_name = "BeerHolderBot";
 
