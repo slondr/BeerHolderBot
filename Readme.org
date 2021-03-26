@@ -11,6 +11,10 @@ A Telegram bot that holds your beer
 - =/quaff <number>=
   
   Drink the beer with the given number. Numbers will be displayed by the =/ontap= command.
+
+- =/corn=
+
+  Harvest some corn.
 * Building & Running
 This project is managed with Cargo, so just build it with =cargo build= and whatever flags you want.
 

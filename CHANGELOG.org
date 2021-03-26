@@ -1,3 +1,10 @@
+* 0.3.3
++ Remove explicit dependency on teloxide-core, as this isn't needed
+* 0.3.2
++ Bump versions of dependencies, including teloxide and tokio:
+  - Get rid of explicit `send` functions due to teloxide autosend
++ Added documentation for =/corn= to the Readme
++ Added GitLab CI script for automated building
 * 0.3.1
 + Implemented =/corn= command
 * 0.3.0
