@@ -10,11 +10,11 @@ repository = "https://gitlab.com/slondr/BeerHolderBot"
 documentation = "https://gitlab.com/slondr/BeerHolderBot/-/blob/master/Readme.org"
 
 [dependencies]
-teloxide = "0.3"
-teloxide-macros = "0.3"
-log = "0.4.8"
-pretty_env_logger = "0.4.0"
-tokio = { version =  "0.2.11", features = ["rt-threaded", "macros", "sync"] }
+teloxide = "0.4"
+teloxide-macros = "0.4"
+log = "0.4"
+pretty_env_logger = "0.4"
+tokio = { version =  "1.3", features = ["rt-threaded", "macros" ] }
 lazy_static = "1.4.0"
 sqlite = "0.25.3"
 reqwest = "0.10.10"
