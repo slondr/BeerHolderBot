@@ -151,7 +151,7 @@ async fn answer(cx: UpdateWithCx<AutoSend<Bot>, Message>, command: Command) -> R
 		Err(e) => cx.reply_to(format!("Uh, something went wrong.\n{}", e)).await?,
 		Ok(beers) => {
 		    let mut m: String = String::new();
-		    if beers.len() == 0 {
+		    if beers.is_empty() {
 			cx.reply_to("Sorry, I'm all empty.").await?
 		    } else {
 			for beer in beers {
