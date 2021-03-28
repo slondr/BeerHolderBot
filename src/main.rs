@@ -66,7 +66,7 @@ async fn get_beer_count(chat_id: i64) -> AsyncResult<i64> {
     if let sqlite::State::Row = statement.next().unwrap() {
 	Ok(statement.read::<i64>(0)?)
     } else {
-	Err("could not retrieve beer count")?
+	Err("could not retrieve beer count".into())
     }
 }
 
@@ -79,7 +79,7 @@ async fn quaff(id: i64) -> AsyncResult<String> {
 	c.execute(format!("DELETE FROM tap WHERE id={}", id))?;
 	Ok(text)
     } else {
-	Err("could not retrieve beer text")?
+	Err("could not retrieve beer text".into())
     }
 }
 
@@ -94,7 +94,7 @@ async fn harvest_corn() -> AsyncResult<String> {
 	let img_url = &parsed_response.unwrap()["urls"]["raw"];
 	Ok(img_url.to_string())
     } else {
-	Err("You don't have a farm.")?
+	Err("You don't have a farm.".into())
     }
 }
 
