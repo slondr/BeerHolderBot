@@ -187,8 +187,9 @@ async fn answer(cx: UpdateWithCx<AutoSend<Bot>, Message>, command: Command) -> R
 	    }
 	},
 	Command::Post => {
-	    log::info!("Posting newm essage");
+	    log::info!("Generating new message");
 	    let new_msg = telegram_markov_chain::chain();
+	    log::info!("Posting new message");
 	    cx.reply_to(new_msg).await?
 	}
     };

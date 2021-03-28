@@ -1364,9 +1364,9 @@ dependencies = [
 
 [[package]]
 name = "telegram-markov-chain"
-version = "0.1.0"
+version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4ce8c4304ad395bdb72c1a458e3f9ef7990030743c914b3618f169b1e2beaf80"
+checksum = "467f29b7980233e9d6b3c40ad6832a9b8a2b56fff928c8c712a97300765de33d"
 dependencies = [
  "json",
  "markov",
