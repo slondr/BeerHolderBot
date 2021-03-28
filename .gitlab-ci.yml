@@ -2,9 +2,19 @@ image: rust
 
 stages:
   - build
+  - test
 
 build:
   stage: build
+  cache:
+    key: one-key-to-rule-them-all
+    paths:
+      - target
   script:
     - cargo build
 
+lint:
+  stage: test
+  script:
+    - rustup component add clippy
+    - cargo clippy --all-targets --all-features
