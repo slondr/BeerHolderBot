@@ -2,9 +2,45 @@ image: rust
 
 stages:
   - build
+  - test
+  - deploy
 
 build:
   stage: build
+  cache:
+    key: one-key-to-rule-them-all
+    paths:
+      - target
   script:
     - cargo build
 
+lint:
+  stage: test
+  cache:
+    key: one-key-to-rule-them-all
+    paths:
+      - target
+  script:
+    - rustup component add clippy
+    - cargo clippy --all-targets --all-features
+
+test:
+  stage: test
+  cache:
+    key: one-key-to-rule-them-all
+    paths:
+      - target
+  script:
+    - cargo test
+
+deploy:
+  stage: deploy
+  dependencies:
+    - test
+  script:
+    - mkdir ~/.ssh
+    - eval $(ssh-agent -s)
+    - ssh-keyscan -H -t rsa ssh.api.ericlondres.tech >> ~/.ssh/known_hosts
+    - ssh root@ssh.api.ericlondres.tech sh -c "cd /root/packages/bot/BeerHolderBot; git pull origin master; ./run.sh"
+  only:
+    - master
