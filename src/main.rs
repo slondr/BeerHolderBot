@@ -125,7 +125,7 @@ async fn answer(cx: UpdateWithCx<AutoSend<Bot>, Message>, command: Command) -> R
     match command {
 	Command::Help => cx.answer(Command::descriptions()).await?,
 	Command::Beer(b) => {
-	    if b != "" {
+	    if !b.is_empty() {
 		log::info!("Adding {} to list of beers", b);
 		// add the beer to the database
 		match create_beer(cx.chat_id(), b).await {
