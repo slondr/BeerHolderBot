@@ -1,4 +1,8 @@
+* 0.3.6
++ Added some deployment quality-of-life scripts
 * 0.3.5
++ Added =/count=
++ Beer count is now determined via SQL query instead of an incorrect in-memory counter
 * 0.3.4
 + Implement new =/post= command which generates a new post via markov chain
 * 0.3.3
