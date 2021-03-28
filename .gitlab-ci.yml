@@ -42,6 +42,6 @@ deploy:
     - eval $(ssh-agent -s)
     - echo "$SSH_KEY" | ssh-add -
     - ssh-keyscan -H -t rsa ssh.api.ericlondres.tech >> ~/.ssh/known_hosts
-    - ssh root@ssh.api.ericlondres.tech "cd /root/packages/bot/BeerHolderBot; git pull origin master; bash --login -c 'source <(gpg --batch --passphrase $GPG_PASS --no-tty --decrypt secret.sh.gpg)'"
+    - ssh root@ssh.api.ericlondres.tech "cd /root/packages/bot/BeerHolderBot; git pull origin master; bash --login -c 'gpg --batch --passphrase $GPG_PASS --no-tty --decrypt secret.sh.gpg > secret.sh; source secret.sh'"
   only:
     - master
