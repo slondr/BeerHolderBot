@@ -104,7 +104,9 @@ enum Command {
     #[command(description = "Drink a beer by index")]
     Quaff(String),
     #[command(description = "Harvest corn")]
-    Corn
+    Corn,
+    #[command(description = "Post a new message")]
+    Post
 }
 
 async fn answer(cx: UpdateWithCx<AutoSend<Bot>, Message>, command: Command) -> ResponseResult<()> {
@@ -183,6 +185,12 @@ async fn answer(cx: UpdateWithCx<AutoSend<Bot>, Message>, command: Command) -> R
 		log::error!("An error occurred within harvest_corn()");
 		cx.reply_to("You don't have a farm.").await?
 	    }
+	},
+	Command::Post => {
+	    log::info!("Generating new message");
+	    let new_msg = telegram_markov_chain::chain();
+	    log::info!("Posting new message");
+	    cx.reply_to(new_msg).await?
 	}
     };
     
