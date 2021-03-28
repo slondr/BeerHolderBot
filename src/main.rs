@@ -66,7 +66,7 @@ async fn get_beer_count(chat_id: i64) -> AsyncResult<i64> {
     if let sqlite::State::Row = statement.next().unwrap() {
 	Ok(statement.read::<i64>(0)?)
     } else {
-	Err("could not retrieve beer count")?
+	Err("could not retrieve beer count".into())
     }
 }
 
@@ -79,7 +79,7 @@ async fn quaff(id: i64) -> AsyncResult<String> {
 	c.execute(format!("DELETE FROM tap WHERE id={}", id))?;
 	Ok(text)
     } else {
-	Err("could not retrieve beer text")?
+	Err("could not retrieve beer text".into())
     }
 }
 
@@ -94,7 +94,7 @@ async fn harvest_corn() -> AsyncResult<String> {
 	let img_url = &parsed_response.unwrap()["urls"]["raw"];
 	Ok(img_url.to_string())
     } else {
-	Err("You don't have a farm.")?
+	Err("You don't have a farm.".into())
     }
 }
 
@@ -125,7 +125,7 @@ async fn answer(cx: UpdateWithCx<AutoSend<Bot>, Message>, command: Command) -> R
     match command {
 	Command::Help => cx.answer(Command::descriptions()).await?,
 	Command::Beer(b) => {
-	    if b != "" {
+	    if !b.is_empty() {
 		log::info!("Adding {} to list of beers", b);
 		// add the beer to the database
 		match create_beer(cx.chat_id(), b).await {
@@ -151,7 +151,7 @@ async fn answer(cx: UpdateWithCx<AutoSend<Bot>, Message>, command: Command) -> R
 		Err(e) => cx.reply_to(format!("Uh, something went wrong.\n{}", e)).await?,
 		Ok(beers) => {
 		    let mut m: String = String::new();
-		    if beers.len() == 0 {
+		    if beers.is_empty() {
 			cx.reply_to("Sorry, I'm all empty.").await?
 		    } else {
 			for beer in beers {

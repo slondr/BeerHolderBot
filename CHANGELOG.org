@@ -1,5 +1,6 @@
 * 0.3.7
 + Automate deployments
++ Fix some style issues raised by Clippy
 * 0.3.6
 + Added some deployment quality-of-life scripts
 * 0.3.5
