@@ -16,6 +16,10 @@ build:
 
 lint:
   stage: test
+  cache:
+    key: one-key-to-rule-them-all
+    paths:
+      - target
   script:
     - rustup component add clippy
     - cargo clippy --all-targets --all-features
