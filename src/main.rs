@@ -18,7 +18,6 @@
 
 use teloxide::{prelude::*, utils::command::BotCommand, requests::ResponseResult};
 use tokio::sync::Mutex;
-use std::sync::atomic::{AtomicU64, Ordering};
 use lazy_static::lazy_static;
 use std::error::Error;
 
@@ -31,7 +30,6 @@ struct Beer {
 
 lazy_static! {
     static ref TAP: Mutex<Vec<String>> = Mutex::new(Vec::new());
-    static ref BEERS: AtomicU64 = AtomicU64::new(0);
     static ref CONNECTION: Mutex<sqlite::Connection> = Mutex::new(sqlite::open("tap.db").unwrap());
 }
 
@@ -62,9 +60,14 @@ async fn get_all_beers(chat_id: i64) -> AsyncResult<Vec<Beer>> {
     Ok(beers)
 }
 
-async fn get_beer_count(chat_id: i64) -> AsyncResult<String> {
+async fn get_beer_count(chat_id: i64) -> AsyncResult<i64> {
     let c = CONNECTION.lock().await;
     let mut statement = c.prepare(format!("SELECT COUNT(id) FROM tap WHERE chat_id={}", chat_id))?;
+    if let sqlite::State::Row = statement.next().unwrap() {
+	Ok(statement.read::<i64>(0)?)
+    } else {
+	Err("could not retrieve beer count")?
+    }
 }
 
 async fn quaff(id: i64) -> AsyncResult<String> {
@@ -127,7 +130,7 @@ async fn answer(cx: UpdateWithCx<AutoSend<Bot>, Message>, command: Command) -> R
 		    Err(e) => cx.reply_to(format!("Er, something went wrong.\n{}", e)).await?,
 		    Ok(_) => {
 			// increment the global beer counter
-			let cur = BEERS.fetch_add(1, Ordering::Relaxed) + 1;
+			let cur = get_beer_count(cx.chat_id()).await.unwrap();
 			// respond with how many beers are held (globally)
 			cx.reply_to(format!("Currently holding {} beer{}", cur, if cur == 1 { "" } else { "s" }))
 			    .await?
@@ -173,8 +176,6 @@ async fn answer(cx: UpdateWithCx<AutoSend<Bot>, Message>, command: Command) -> R
 		match quaff_attempt.await {
 		    Err(e) => cx.reply_to(format!("Sorry, we can't do that.\n{}", e)).await?,
 		    Ok(m) => {
-			// reduce the global beer counter
-			let _ = BEERS.fetch_sub(1, Ordering::Relaxed);
 			// send a message informing which beer was quaffed
 			cx.reply_to(format!("You have quaffed \"{}\"", m)).await?
 		    }
