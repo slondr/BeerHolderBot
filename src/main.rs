@@ -22,6 +22,8 @@ use std::sync::atomic::{AtomicU64, Ordering};
 use lazy_static::lazy_static;
 use std::error::Error;
 
+type AsyncResult<T> = Result<T, Box<dyn Error + Send + Sync>>;
+
 struct Beer {
     id: i64,
     text: String
@@ -33,7 +35,7 @@ lazy_static! {
     static ref CONNECTION: Mutex<sqlite::Connection> = Mutex::new(sqlite::open("tap.db").unwrap());
 }
 
-async fn initialize_database() -> Result<(), Box<dyn std::error::Error>> {
+async fn initialize_database() -> AsyncResult<()> {
     CONNECTION.lock().await.execute("CREATE TABLE IF NOT EXISTS tap (
       id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
       chat_id INTEGER NOT NULL,
@@ -41,13 +43,13 @@ async fn initialize_database() -> Result<(), Box<dyn std::error::Error>> {
     Ok(())
 }
 
-async fn create_beer(chat_id: i64, content: String) -> Result<(), Box<dyn Error + Send + Sync>> {
+async fn create_beer(chat_id: i64, content: String) -> AsyncResult<()> {
     CONNECTION.lock().await
 	.execute(format!("INSERT INTO tap (chat_id, text) VALUES ('{}', '{}')", chat_id, content))?;
     Ok(())
 }
 
-async fn get_all_beers(chat_id: i64) -> Result<Vec<Beer>, Box<dyn Error + Send + Sync>> {
+async fn get_all_beers(chat_id: i64) -> AsyncResult<Vec<Beer>> {
     let mut beers: Vec<Beer> = Vec::new();
     let c =  CONNECTION.lock().await;
     let mut statement = c.prepare(format!("SELECT id, text FROM tap WHERE chat_id={}", chat_id))?;
@@ -60,7 +62,12 @@ async fn get_all_beers(chat_id: i64) -> Result<Vec<Beer>, Box<dyn Error + Send +
     Ok(beers)
 }
 
-async fn quaff(id: i64) -> Result<String, Box<dyn Error + Send + Sync>> {
+async fn get_beer_count(chat_id: i64) -> AsyncResult<String> {
+    let c = CONNECTION.lock().await;
+    let mut statement = c.prepare(format!("SELECT COUNT(id) FROM tap WHERE chat_id={}", chat_id))?;
+}
+
+async fn quaff(id: i64) -> AsyncResult<String> {
     let c = CONNECTION.lock().await;
     let mut statement = c.prepare(format!("SELECT text FROM tap WHERE id={}", id))?;
     if let sqlite::State::Row = statement.next()?  {
@@ -73,7 +80,7 @@ async fn quaff(id: i64) -> Result<String, Box<dyn Error + Send + Sync>> {
     }
 }
 
-async fn harvest_corn() -> Result<String, Box<dyn Error + Send + Sync>> {
+async fn harvest_corn() -> AsyncResult<String> {
     if let Some(access) = std::env::var_os("UNSPLASH_ACCESS") {
 	// call API to get a random picture of corn
 	let auth_uri = format!("https://api.unsplash.com/photos/random/?client_id={}&query={}", access.into_string().unwrap(), "corn");
