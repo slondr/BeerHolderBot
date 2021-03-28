@@ -15,6 +15,9 @@ A Telegram bot that holds your beer
 - =/corn=
 
   Harvest some corn.
+- =/count=
+
+  Get the current count of stored beers for this tap.
 * Building & Running
 This project is managed with Cargo, so just build it with =cargo build= and whatever flags you want.
 
