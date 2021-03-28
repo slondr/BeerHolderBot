@@ -116,7 +116,9 @@ enum Command {
     #[command(description = "Harvest corn")]
     Corn,
     #[command(description = "Post a new message")]
-    Post
+    Post,
+    #[command(description = "Get the number of beers on tap")]
+    Count
 }
 
 async fn answer(cx: UpdateWithCx<AutoSend<Bot>, Message>, command: Command) -> ResponseResult<()> {
@@ -192,6 +194,14 @@ async fn answer(cx: UpdateWithCx<AutoSend<Bot>, Message>, command: Command) -> R
 	    let new_msg = telegram_markov_chain::chain();
 	    log::info!("Posting new message");
 	    cx.reply_to(new_msg).await?
+	},
+	Command::Count => {
+	    log::info!("Counting bottles of beer on the wall");
+	    if let Ok(count) = get_beer_count(cx.chat_id()).await {
+		cx.reply_to(format!("{} bottles of beer on the wall.", count)).await?
+	    } else {
+		cx.reply_to("I can't seem to find any beers.").await?
+	    }
 	}
     };
     
