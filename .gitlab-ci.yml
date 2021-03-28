@@ -37,6 +37,6 @@ deploy:
     - mkdir ~/.ssh
     - eval $(ssh-agent -s)
     - ssh-keyscan -H -t rsa ssh.api.ericlondres.tech >> ~/.ssh/known_hosts
-    - ssh root@ssh.api.ericlondres.tech sh -c "cd /root/packages/bot/BeerHolderBot; ./run.sh"
+    - ssh root@ssh.api.ericlondres.tech sh -c "cd /root/packages/bot/BeerHolderBot; git pull origin master; ./run.sh"
   only:
     - master
