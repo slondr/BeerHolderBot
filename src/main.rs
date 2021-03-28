@@ -164,13 +164,6 @@ async fn answer(cx: UpdateWithCx<AutoSend<Bot>, Message>, command: Command) -> R
 	    log::info!("Quaffing beer #{}", beer);
 	    // try to parse the user input as an integer
 	    if let Ok(index) = beer.parse::<i64>() {
-/*		let tap_lock = TAP.lock().await;
-		if let Some(quaffed_beer) = tap_lock.get(index) {
-		    let quaffed_beer = quaffed_beer.to_string();
-		    drop(tap_lock);
-		    let mut tap_lock = TAP.lock().await;
-		    tap_lock.remove(index);
-		 */
 		let quaff_attempt = quaff(index);
 
 		match quaff_attempt.await {
