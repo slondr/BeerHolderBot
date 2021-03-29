@@ -1,6 +1,6 @@
 [package]
 name = "BeerHolderBot"
-version = "0.3.6"
+version = "0.3.7"
 authors = ["Eric S. Londres <elondres@stevens.edu>"]
 edition = "2018"
 description = "A Telegram bot which holds your beer"
@@ -19,4 +19,4 @@ lazy_static = "1.4.0"
 sqlite = "0.25.3"
 reqwest = "0.11"
 json = "0.12.4"
-telegram-markov-chain = "0.1.1"
+telegram-markov-chain = "0.1.2"
