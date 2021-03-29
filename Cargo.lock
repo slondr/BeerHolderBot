@@ -4,7 +4,7 @@ version = 3
 
 [[package]]
 name = "BeerHolderBot"
-version = "0.3.6"
+version = "0.3.7"
 dependencies = [
  "json",
  "lazy_static",
@@ -1147,11 +1147,12 @@ dependencies = [
 
 [[package]]
 name = "telegram-markov-chain"
-version = "0.1.1"
+version = "0.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "467f29b7980233e9d6b3c40ad6832a9b8a2b56fff928c8c712a97300765de33d"
+checksum = "cd477e46f6936957cb3864ed0e52c4881d56dc576bb509df611367c8468c8b2d"
 dependencies = [
  "json",
+ "lazy_static",
  "markov",
 ]
 
