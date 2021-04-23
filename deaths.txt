@@ -1,0 +1,1107 @@
+  killed by a(n) jackal
+  killed by a(n) dwarf
+  killed by a(n) soldier ant
+  killed by a(n) gnome lord
+  killed by a(n) sewer rat
+  killed by a(n) small mimic
+  killed by a(n) giant bat
+  killed by a(n) water moccasin
+  killed by a(n) fox
+  killed by a(n) wand
+  killed by a(n) gnome
+  killed by a(n) rothe
+  killed by a(n) giant ant
+  ascended
+  killed by a(n) water demon
+  poisoned by a(n) rotted corpse
+  killed by a(n) hobbit
+  killed by a(n) shopkeeper
+  killed by a(n) hill orc
+  killed by a(n) killer bee
+  killed by a(n) goblin
+  killed by a(n) kitten
+  killed by a(n) gas spore's explosion
+  killed by a(n) newt
+  killed by a(n) bat
+  killed by a(n) little dog
+  killed by a(n) falling rock
+  killed by a(n) magic missile
+  killed by a(n) bolt of fire
+  slipped while mounting a(n) saddled (pet)
+  killed by a(n) bolt of lightning
+  killed by a(n) pony
+  killed by a(n) fire ant
+  killed by a(n) rabid rat
+  killed by a(n) mumak
+  killed by a(n) bolt of cold
+  killed by a(n) giant rat
+  killed by a(n) coyote
+  killed by a(n) wolf
+  killed by a(n) black pudding
+  killed by a(n) giant spider
+  killed by a(n) owlbear
+  killed by a(n) boulder
+  killed by a(n) leocrotta
+  killed by a(n) wererat
+  killed by a(n) white unicorn
+  died of starvation
+  killed by a(n) arrow
+  killed by a(n) homunculus
+  killed by a(n) jaguar
+  killed by a(n) werejackal
+  killed by a(n) Woodland-elf
+  killed by a(n) gecko
+  killed by a(n) gnome king
+  killed by a(n) watch captain
+  killed by a(n) grid bug
+  killed by a(n) hobgoblin
+  killed by a(n) iguana
+  choked
+  killed by a(n) system shock
+  killed by kicking (something)
+  killed by a(n) poisonous corpse
+  killed by a(n) priest(ess)
+  killed by a(n) kobold zombie
+  killed by a(n) rope golem
+  killed by a(n) giant mimic
+  killed by a(n) kobold
+  killed by a(n) ape
+  killed by a(n) dwarf lord
+  petrified by a(n) (cockatrice|chickatrice)
+  killed by a(n) crossbow bolt
+  killed by the wrath of (a god)
+  killed by a(n) Uruk-hai
+  killed by a(n) plains centaur
+  killed by a(n) gray unicorn
+  killed by a(n) boiling potion
+  killed by a(n) large mimic
+  killed by a(n) water elemental
+  killed by a(n) brown mold
+  killed by a(n) bugbear
+  killed by a(n) dingo
+  killed by a(n) giant beetle
+  killed by a(n) dagger
+  killed by a(n) gold golem
+  killed by a(n) dart
+  killed by a(n) death ray
+  killed by a(n) imp
+  killed by a(n) werewolf
+  killed by a(n) blue jelly
+  killed by a(n) gargoyle
+  killed by a(n) minotaur
+  killed by a(n) housecat
+  killed by a(n) panther
+  killed by a(n) snake
+  killed by a(n) troll
+  killed by a(n) raven
+  killed by a(n) electric shock
+  killed by a(n) human mummy
+  killed by a(n) Green-elf
+  killed by a(n) cave spider
+  killed by a(n) dog
+  killed by a(n) manes
+  killed by a(n) black unicorn
+  killed by a(n) dwarf zombie
+  killed by a(n) orc zombie
+  killed by a(n) yeti
+  killed by a(n) watchman
+  petrified by a(n) (cockatrice|chickatrice) corpse
+  killed by a(n) scroll of earth
+  killed by a(n) kobold lord
+  zapped (him|her)self with a(n) wand
+  killed by a(n) riding accident
+  killed by a(n) guard
+  killed by a(n) acidic corpse
+  killed by a(n) large kobold
+  poisoned by a(n) orcish arrow
+  killed by a(n) ettin mummy
+  killed by a(n) lynx
+  killed by a(n) scroll of genocide
+  killed by a(n) crocodile
+  killed by a(n) straw golem
+  killed by a(n) elf zombie
+  killed by a(n) fall onto poison spikes
+  fell into a(n) pit
+  killed by a(n) gnome zombie
+  killed by a(n) falling object
+  killed by a(n) horse
+  poisoned by a(n) killer bee
+  killed by a(n) unsuccessful polymorph
+  killed by a(n) energy vortex
+  killed by a(n) air elemental
+  killed by a(n) tengu
+  killed by a(n) Mordor orc
+  killed by a(n) orcish arrow
+  killed by a(n) bear trap
+  killed by a(n) large cat
+  killed by a(n) rock mole
+  killed by a(n) dwarf king
+  killed by a(n) human zombie
+  killed by a(n) gnome mummy
+  killed by brainlessness
+  drowned in a(n) (moat|pool of water) by a(n) (*eel|kraken)
+  killed by a(n) djinni
+  killed by a(n) spotted jelly
+  killed by a(n) tiger
+  killed by a(n) Grey-elf
+  killed by a(n) vampire bat
+  killed by a(n) winged gargoyle
+  killed by a(n) winter wolf cub
+  killed by a(n) paper golem
+  killed by a(n) blast of frost
+  killed by a(n) garter snake
+  killed by a(n) stalker
+  killed by a(n) ettin zombie
+  killed by a(n) warg
+  killed by a(n) ogre
+  killed by a(n) winter wolf
+  killed by a(n) succubus
+  killed by a(n) orcish dagger
+  killed by a(n) rock troll
+  killed by a(n) quasit
+  killed by a(n) large dog
+  killed by a(n) gnomish wizard
+  killed by contaminated water
+  killed by Yeenoghu
+  killed by a(n) little dart
+  killed by a(n) contaminated potion
+  killed by strangulation
+  killed by a(n) rock piercer
+  killed by a(n) mountain centaur
+  killed by a(n) kobold mummy
+  killed by a(n) soldier
+  poisoned by a(n) little dart
+  killed by a(n) vampire lord
+  killed by a(n) orc-captain
+  killed by a(n) lizard
+  killed by a(n) incubus
+  killed by a(n) warhorse
+  killed by a(n) vampire
+  killed by the ghost of (a player)
+  killed by a(n) gas cloud
+  killed by a(n) ochre jelly
+  killed by a(n) forest centaur
+  zapped (him|her)self with a(n) spell
+  killed by a(n) giant zombie
+  killed by a(n) elf-lord
+  killed by a(n) acid blob
+  killed by a(n) purple worm
+  killed by a(n) giant mummy
+  killed by a(n) Kop Sergeant
+  killed by touching (an artifact)
+  killed by a(n) Olog-hai
+  killed by a(n) elf mummy
+  killed by a(n) xorn
+  killed by a(n) exploding wand
+  killed by a(n) potion of acid
+  killed by a(n) Elvenking
+  killed by a(n) elven dagger
+  killed by a(n) touch of death
+  killed by a(n) ghoul
+  killed by a(n) gray ooze
+  killed by a(n) jabberwock
+  burned by a(n) tower of flame
+  killed by a(n) pyrolisk
+  killed by a(n) orc mummy
+  killed by a(n) gremlin
+  killed by a(n) dwarf mummy
+  killed by a(n) potion of holy water
+  killed by a(n) captain
+  killed by a(n) fire elemental
+  killed by a(n) mind flayer
+  killed by a(n) carnivorous bag
+  killed by a(n) sergeant
+  killed by a(n) land mine
+  killed by a(n) red mold
+  fell into a(n) pit of iron spikes
+  killed by a(n) blast of disintegration
+  killed by a(n) barrow wight
+  killed by a(n) baluchitherium
+  poisoned by a(n) water moccasin
+  killed by a(n) lieutenant
+  killed by a(n) ogre king
+  killed by a(n) wraith
+  killed by a(n) Keystone Kop
+  killed by a(n) carnivorous ape
+  killed by a(n) mastodon
+  caught (him|her)self in (his|her) own magical blast
+  killed by a(n) zruty
+  killed by a(n) master mind flayer
+  killed by a(n) sasquatch
+  killed by a(n) blast of fire
+  killed by falling downstairs
+  shot (him|her)self with a(n) death ray
+  petrified by Medusa
+  poisoned by a(n) giant spider
+  killed by a(n) tower of flame
+  killed by a(n) couatl of (a god)
+  killed by a(n) burning scroll
+  killed by overexertion
+  killed by a(n) stone giant
+  killed by a(n) titan
+  killed by a(n) cadaver
+  poisoned by a(n) rabid rat
+  killed by a(n) Kop Lieutenant
+  killed by a(n) guardian naga hatchling
+  killed by a(n) elven arrow
+  killed by a(n) green mold
+  killed by a(n) shattered potion
+  killed by a(n) ogre lord
+  killed by a(n) flesh golem
+  poisoned by a(n) soldier ant
+  killed by a(n) red naga hatchling
+  killed by a(n) leather golem
+  fell onto a(n) sink
+  caught (him|her)self in (his|her) own fireball
+  killed by a(n) black naga hatchling
+  killed by a(n) ettin
+  killed by a(n) golden naga hatchling
+  killed by a(n) ice vortex
+  killed by Juiblex
+  killed by a(n) iron ball collision
+  killed by the Oracle
+  killed by a(n) water troll
+  killed by a(n) arch-lich
+  killed by a(n) scorpion
+  killed by a(n) explosion
+  killed by a(n) magical explosion
+  killed by a(n) fire giant
+  poisoned by a(n) snake
+  crushed to death by a(n) collapsing drawbridge
+  poisoned by a(n) dart
+  killed by a(n) iron golem
+  killed by a(n) queen bee
+  killed by a(n) centipede
+  killed by a(n) marilith
+  poisoned by Juiblex
+  killed by a(n) shuriken
+  Crunched in the head by a(n) iron ball
+  killed by a(n) golden naga
+  killed by a(n) exploding large box
+  killed by Master Kaen
+  petrified by tasting (cockatrice|chickatrice) meat
+  killed by a(n) earth elemental
+  petrified by a(n) (cockatrice|chickatrice) egg
+  killed by a(n) iron piercer
+  killed by a(n) gelatinous cube
+  petrified by touching a(n) (cockatrice|chickatrice) corpse bare-handed
+  killed by a(n) Archon
+  caught (him|her)self in (his|her) own ball of lightning
+  killed by a(n) monkey
+  drowned in a(n) (moat|pool of water)
+  killed by a(n) shark
+  killed by a(n) exploding rune
+  killed by the Wizard of Yendor
+  killed by a(n) dwarvish spear
+  killed by a(n) air elemental of (a god)
+  killed by a(n) couatl
+  killed by a(n) burning book
+  killed by a(n) thrown potion
+  killed by a(n) incubus of (a god)
+  killed by tumbling down a(n) flight of stairs
+  killed by a(n) disenchanter
+  killed by boiling potions
+  caught (him|her)self in (his|her) own ball of cold
+  killed by a(n) baby crocodile
+  killed by a(n) frost giant
+  turned to slime by a(n) green slime
+  killed by exhaustion
+  killed by a(n) ice troll
+  killed by genocidal confusion
+  killed by a(n) master lich
+  poisoned by a(n) vampire bat
+  killed by a(n) silver dragon
+  killed by a(n) fire vortex
+  killed by a(n) xan
+  killed by a(n) vrock
+  killed by Croesus
+  killed by a(n) fog cloud
+  killed by a(n) hill giant
+  killed by a(n) umber hulk
+  killed by a(n) bone devil
+  killed by a(n) red dragon
+  killed by Famine
+  poisoned by Demogorgon
+  killed by a(n) yellow dragon
+  dissolved in molten lava
+  killed by a(n) red naga
+  killed by a(n) black naga
+  killed by a(n) cobra
+  poisoned by a(n) quasit
+  killed by a(n) black dragon
+  killed by a(n) leprechaun
+  killed by a(n) salamander
+  killed by a(n) Kop Kaptain
+  killed by a(n) orange dragon
+  killed by a(n) succubus of (a god)
+  killed by a(n) exploding crystal ball
+  killed by a(n) pit viper
+  killed by sipping boiling water
+  killed by a(n) (*eel|kraken)
+  poisoned by a(n) centipede
+  killed by a(n) water elemental of (a god)
+  killed by a(n) gray dragon
+  caught (him|her)self in (his|her) own burning oil
+  killed by a(n) nalfeshnee
+  killed by bumping into a(n) wall
+  killed by a(n) clay golem
+  killed by a(n) green dragon
+  killed by a(n) barbed devil
+  killed by a(n) Aleax
+  killed by a(n) spear
+  poisoned by Pestilence
+  killed by a(n) orc shaman
+  killed by a(n) hell hound
+  killed by Pestilence
+  killed by a(n) exploding chest
+  killed by a(n) blue dragon
+  killed by a(n) anti-magic implosion
+  killed by a(n) fire elemental of (a god)
+  killed by a(n) stone golem
+  crushed to death by a(n) exploding drawbridge
+  killed by a(n) earth elemental of (a god)
+  killed by Ashikaga Takauji
+  killed by a(n) poisoned blast
+  killed (him|her)self by breaking a(n) wand
+  killed by a(n) shocking sphere
+  killed by the high priest(ess) of (a god)
+  killed by a(n) storm giant
+  burned by molten lava
+  killed by a(n) white dragon
+  escaped (in celestial disgrace)
+  killed by the Cyclops
+  killed by a(n) balrog
+  killed by a(n) flaming sphere
+  killed by life drainage
+  killed by a(n) poisoned needle
+  killed by a(n) psychic blast
+  a trickery
+  killed by a(n) freezing sphere
+  killed by a(n) glass golem
+  killed by Lord Surtur
+  killed by a(n) blast of acid
+  killed by a(n) contact-poisoned spellbook
+  killed by colliding with the ceiling
+  killed by a(n) lich
+  killed while stuck in creature form
+  killed by a(n) nurse
+  killed by a(n) pit fiend
+  killed by a(n) Aleax of (a god)
+  killed by a(n) Angel of (a god)
+  caught (him|her)self in (his|her) own death field
+  starvation
+  killed by a(n) chameleon imitating a(n) minotaur
+  poisoned by a(n) unicorn horn
+  poisoned by a(n) crossbow bolt
+  killed by a(n) guardian naga
+  killed by Asmodeus
+  killed by a(n) wood golem
+  killed by Nalzok
+  killed by a(n) knife
+  killed by a(n) cloud of poison gas
+  killed by a(n) acidic glob
+  petrified by a(n) soldier
+  killed (him|her)self with (his|her) bullwhip
+  killed by a(n) hezrou
+  killed by petrification
+  killed by a(n) demilich
+  killed by a(n) died
+  killed by a(n) electric chair
+  killed by a(n) elven spear
+  killed by a(n) blast of lightning
+  killed by a(n) chameleon imitating a(n) vampire lord
+  killed by a(n) horned devil
+  killed by a(n) titanothere
+  killed by a(n) Angel
+  killed by (his|her) own pick-axe
+  poisoned by a(n) arrow
+  killed by a(n) kobold shaman
+  killed by a(n) ki-rin
+  killed by a(n) vampire in bat form
+  killed by the Minion of Huhetotl
+  killed by a(n) blast of missiles
+  killed by a(n) priestess of (a god)
+  killed by a(n) dust vortex
+  killed by a(n) chameleon imitating a(n) mastodon
+  killed by Death
+  killed by a(n) grappling hook
+  killed by a(n) chameleon imitating a(n) jabberwock
+  killed by the Chromatic Dragon
+  poisoned by a(n) rotted glob of gray ooze
+  killed by a(n) potion of unholy water
+  killed by a(n) python
+  poisoned by Scorpius
+  killed by a(n) priest of (a god)
+  killed by a(n) quantum mechanic
+  drowned in deep water
+  killed by a(n) ice devil
+  drowned in a(n) (moat|pool of water) by a(n) couatl
+  killed by a(n) skeleton
+  killed by Orcus
+  killed by Ixoth
+  killed by a(n) samurai
+  killed by a(n) chameleon imitating a(n) arch-lich
+  killed by (a worthless piece of glass)
+  killed by Demogorgon
+  dragged downstairs by a(n) iron ball
+  poisoned by a(n) scorpion
+  killed by Izchak; the shopkeeper
+  killed by a(n) marilith of (a god)
+  killed by a(n) violet fungus
+  turned into green slime
+  killed by Izchak, the shopkeeper
+  killed by a(n) vrock of (a god)
+  petrified by a(n) sergeant
+  killed by a(n) shade
+  petrified by kicking a(n) (cockatrice|chickatrice) corpse without boots
+  killed by a(n) quivering blob
+  killed by (his|her) own axe
+  killed by using a(n) magical horn on (him|her)self
+  escaped (with a(n) fake Amulet)
+  killed by a(n) exploding potion
+  killed by a(n) hell hound pup
+  poisoned by a(n) pit viper
+  poisoned by a(n) poison dart
+  killed by a(n) poison dart
+  killed by touching The Sceptre of Might
+  petrified by a(n) captain
+  killed by a(n) wumpus
+  killed by a(n) lance
+  killed by a(n) mildly contaminated potion
+  killed by (his|her) own battle-axe
+  killed by a(n) glass piercer
+  killed by a(n) baby white dragon
+  killed by a(n) baby orange dragon
+  killed by the Dark One
+  killed by a(n) chameleon imitating a(n) vampire
+  killed by a(n) baby gray dragon
+  crushed to death by a(n) falling drawbridge
+  killed by shattered potions
+  killed by a(n) baby yellow dragon
+  killed by a(n) ranseur
+  killed by a(n) spetum
+  killed by a(n) baby green dragon
+  killed by a(n) rock
+  killed by a(n) chameleon imitating a(n) baluchitherium
+  killed by a(n) chameleon imitating a(n) hell hound
+  killed by a(n) vampire lord in bat form
+  killed by a(n) burning potion of oil
+  killed by burning scrolls
+  went to heaven prematurely
+  killed by a(n) steam vortex
+  killed by a(n) chameleon imitating a(n) leocrotta
+  killed by a(n) long worm
+  killed by axing a(n) hard object
+  killed by a(n) baby black dragon
+  petrified by a(n) lieutenant
+  poisoned by a(n) fall onto poison spikes
+  drowned in a(n) (moat|pool of water) by a(n) python
+  killed by Vlad the Impaler
+  killed by a(n) baby silver dragon
+  squished under a(n) boulder
+  killed by a(n) chameleon imitating a(n) winged gargoyle
+  killed by a(n) baby blue dragon
+  killed by a(n) ninja
+  killed by a(n) chameleon imitating a(n) air elemental
+  petrified by losing gloves while wielding a(n) (cockatrice|chickatrice) corpse
+  killed by a(n) baby red dragon
+  killed by Dispater
+  committed suicide
+  killed by a(n) acid venom
+  petrified by tasting Medusa meat
+  killed by touching Mjollnir
+  killed by a(n) partisan
+  petrified by trying to tin a(n) (cockatrice|chickatrice) without gloves
+  killed by a(n) chameleon imitating a(n) master lich
+  killed by a(n) trapper
+  killed by a(n) lurker above
+  killed by a(n) glaive
+  poisoned by a(n) queen bee
+  killed by a(n) boomerang
+  killed by touching The Platinum Yendorian Express Card
+  killed by a(n) ya
+  poisoned by a(n) cobra
+  killed by a(n) chameleon imitating a(n) ettin
+  killed by a(n) (cockatrice|chickatrice)
+  killed by a(n) javelin
+  petrified by elementary physics
+  killed by a(n) woodchuck
+  killed by a(n) chameleon imitating a(n) fire vortex
+  killed by a(n) chameleon imitating a(n) mumak
+  killed by a(n) unrefrigerated sip of juice
+  killed by a(n) orcish spear
+  killed by a(n) chameleon imitating a(n) salamander
+  teleported out of the dungeon and fell to (his|her) death
+  killed by contaminated tap water
+  killed by a(n) alchemic blast
+  killed by a(n) human
+  killed by a(n) imperious order
+  killed by a(n) chameleon imitating a(n) queen bee
+  killed by a(n) guisarme
+  killed by a(n) valkyrie
+  killed by bumping into a(n) door
+  petrified by kicking a(n) (cockatrice|chickatrice) corpse barefoot
+  killed by a(n) residual undead turning effect
+  killed by a(n) chameleon imitating a(n) soldier ant
+  killed by a(n) knight
+  killed by a(n) halberd
+  killed by a(n) chameleon imitating a(n) zruty
+  killed by a(n) lucern hammer
+  crushed to death by a(n) closing drawbridge
+  killed by a(n) baby long worm
+  died of exhaustion
+  killed by a(n) chameleon imitating a(n) xorn
+  killed by (his|her) own dwarvish mattock
+  killed by a(n) chameleon imitating a(n) warhorse
+  killed by a(n) chameleon imitating a(n) tiger
+  petrified by swallowing a(n) (cockatrice|chickatrice) whole
+  killed by a(n) doppelganger imitating a(n) vampire lord
+  drowned in a(n) swamp
+  petrified by a(n) Archon
+  killed by self-genocide
+  killed by a(n) chameleon imitating a(n) Olog-hai
+  quit while already on Charon's boat
+  killed by bumping into a(n) boulder
+  killed by a(n) finger of death
+  killed by a(n) barbarian
+  killed by touching The Magic Mirror of Merlin
+  killed by a(n) chameleon imitating a(n) titan
+  poisoned by a(n) rotted glob of brown pudding
+  killed by a(n) chameleon imitating a(n) fire ant
+  killed by a(n) silver arrow
+  killed by a(n) chameleon imitating a(n) water troll
+  petrified by a(n) troll
+  killed by a(n) chameleon imitating a(n) marilith
+  killed by a(n) chameleon imitating a(n) disenchanter
+  killed by a(n) chameleon imitating a(n) energy vortex
+  killed by a(n) chameleon imitating a(n) rock troll
+  killed by Medusa
+  killed by a(n) chameleon imitating a(n) lynx
+  petrified by removing gloves while wielding a(n) (cockatrice|chickatrice) corpse
+  petrified by trying to help a(n) (cockatrice|chickatrice) out of a(n) pit
+  killed by a(n) bone devil of (a god)
+  killed by the Master Assassin
+  killed by a(n) bec de corbin
+  killed by a(n) wizard
+  killed by a(n) exploding ring
+  killed by a(n) chameleon imitating a(n) giant mummy
+  killed by a(n) chameleon imitating a(n) cobra
+  killed by a(n) chameleon imitating a(n) fire elemental
+  killed by a(n) chameleon imitating a(n) balrog
+  killed by a(n) chameleon imitating a(n) silver dragon
+  killed by jumping out of a(n) bear trap
+  killed by a(n) chameleon
+  poisoned by a(n) elven arrow
+  killed by a(n) orc
+  killed by a(n) green slime
+  killed by a(n) baby purple worm
+  killed by a(n) chameleon imitating a(n) storm giant
+  killed by a(n) chameleon imitating a(n) bone devil
+  killed by a(n) chameleon imitating a(n) titanothere
+  killed by a(n) chameleon imitating a(n) red dragon
+  fell into a(n) chasm
+  petrified by attempting to saddle a(n) (cockatrice|chickatrice)
+  tower of flame
+  killed by a(n) chameleon imitating a(n) gray dragon
+  deliberately plunged into a(n) pit
+  killed by a(n) chameleon imitating a(n) stalker
+  killed by a(n) chameleon imitating a(n) panther
+  killed by a(n) bardiche
+  killed by wedging into a(n) narrow crevice
+  killed by a(n) cursed throne
+  killed by sitting on a(n) iron spike
+  poisoned by a(n) couatl
+  killed by a(n) hezrou of (a god)
+  killed by a(n) tourist
+  petrified by a(n) watch captain
+  killed by a(n) chameleon imitating a(n) sasquatch
+  panic
+  killed by a(n) chameleon imitating a(n) owlbear
+  killed by a(n) chameleon imitating a(n) orange dragon
+  killed by a(n) abbot
+  killed by (a gem stone)
+  turned to slime by a(n) (cockatrice|chickatrice) egg
+  petrified by a(n) rock troll
+  killed by a(n) voulge
+  killed by leg damage from being pulled out of a(n) bear trap
+  petrified by a(n) watchman
+  killed by a(n) chameleon imitating a(n) black dragon
+  killed by a(n) jellyfish
+  killed by a(n) bill-guisarme
+  killed by a(n) flint stone
+  petrified by a(n) Olog-hai
+  killed by a(n) archeologist
+  poisoned by a(n) rotten lump of royal jelly
+  petrified by a(n) titan
+  petrified by a(n) ogre king
+  killed by a(n) chameleon imitating a(n) vrock
+  killed by a(n) chameleon imitating a(n) golden naga
+  killed by a(n) monk
+  killed by a(n) chameleon imitating a(n) horse
+  killed by a(n) chameleon imitating a(n) iron golem
+  killed by a(n) shito
+  petrified by touching (cockatrice|chickatrice) corpses bare-handed
+  killed by touching The Longbow of Diana
+  killed by a(n) renegade priestess of (a god)
+  killed by a(n) chameleon imitating a(n) frost giant
+  killed by a(n) healer
+  killed by a(n) chameleon imitating a(n) green dragon
+  killed by a(n) chameleon imitating a(n) purple worm
+  killed by a(n) chameleon imitating a(n) white dragon
+  crushed to death underneath a(n) drawbridge
+  killed by the Master of Thieves
+  killed by a(n) rogue
+  killed by a(n) piranha
+  killed by a(n) chameleon imitating a(n) troll
+  killed by a(n) warrior
+  killed by a(n) elf
+  killed by elementary chemistry
+  killed by handling Grimtooth
+  killed by a(n) doppelganger
+  killed by a(n) chameleon imitating a(n) nalfeshnee
+  killed by a(n) chameleon imitating a(n) jaguar
+  killed by a(n) chameleon imitating a(n) mountain centaur
+  killed by a(n) chameleon imitating a(n) glass golem
+  petrified by wielding a(n) (cockatrice|chickatrice) corpse bare-handed
+  killed by a(n) chameleon imitating a(n) ettin mummy
+  turned to slime by a(n) scroll of genocide
+  killed by a(n) renegade priest of (a god)
+  killed by a(n) chameleon imitating a(n) gargoyle
+  killed by a(n) chameleon imitating a(n) pyrolisk
+  killed by a(n) chameleon imitating a(n) yeti
+  killed by a(n) chameleon imitating a(n) yellow dragon
+  killed by a(n) chameleon imitating a(n) crocodile
+  petrified by a(n) chameleon imitating a(n) (cockatrice|chickatrice)
+  petrified by a(n) storm giant
+  killed by a(n) chameleon imitating a(n) clay golem
+  killed by a(n) chameleon imitating a(n) scorpion
+  killed by a(n) doppelganger imitating a(n) minotaur
+  petrified by (cockatrice|chickatrice) corpses
+  killed by crashing into iron bars
+  killed by handling a(n) silver saber
+  petrified by deliberately meeting Medusa's gaze
+  killed by Azura, the shopkeeper
+  killed by a(n) silver spear
+  killed by a(n) renegade Angel of (a god)
+  killed by a(n) chameleon imitating a(n) ice troll
+  killed by handling a(n) silver dagger
+  killed by Scorpius
+  petrified by a(n) hill giant
+  killed by touching The Tsurugi of Muramasa
+  killed by handling a(n) shield of reflection
+  killed by handling a(n) ring of regeneration
+  killed by a(n) apprentice
+  killed by handling a(n) ring of polymorph control
+  killed by Zlaw; the shopkeeper
+  killed by a(n) chameleon imitating a(n) carnivorous ape
+  killed by a(n) cavewoman
+  killed by Dirk; the shopkeeper
+  killed by dangerous winds
+  killed by a(n) chameleon imitating a(n) black pudding
+  petrified by a(n) forest centaur
+  killed by a(n) chameleon imitating a(n) baby white dragon
+  killed by handling a(n) ring of protection
+  killed by sitting in lava
+  killed by a(n) chameleon imitating a(n) earth elemental
+  killed by a(n) chameleon imitating a(n) winter wolf
+  killed by a(n) chameleon imitating a(n) water elemental
+  poisoned by a(n) bone devil
+  killed by a(n) chameleon imitating a(n) water moccasin
+  killed by a(n) doppelganger imitating a(n) arch-lich
+  killed by a(n) chameleon imitating a(n) large dog
+  killed by a(n) chameleon imitating a(n) master mind flayer
+  killed by a(n) scroll of fire
+  killed by a(n) chameleon imitating a(n) giant mimic
+  killed by a(n) chameleon imitating a(n) fire giant
+  killed by a(n) chameleon imitating a(n) pit viper
+  killed by a(n) doppelganger imitating a(n) jabberwock
+  killed by a(n) fauchard
+  killed by handling a(n) ring of invisibility
+  killed by a(n) chameleon imitating a(n) hell hound pup
+  killed by a(n) lemure
+  killed by a(n) chameleon imitating a(n) pony
+  killed by Lucrezia, the shopkeeper
+  petrified by a(n) plains centaur
+  killed by a(n) chameleon imitating a(n) ape
+  killed by a(n) chameleon imitating a(n) (*eel|kraken)
+  petrified by a(n) bugbear
+  killed by a(n) ranger
+  poisoned by a(n) shuriken
+  killed by a(n) chameleon imitating a(n) steam vortex
+  killed by a(n) caveman
+  killed by Thoth Amon
+  killed by Dharma; the shopkeeper
+  killed by a(n) barbed devil of (a god)
+  killed by a(n) chameleon imitating a(n) rope golem
+  killed by a(n) chameleon imitating a(n) raven
+  killed by a(n) chameleon imitating a(n) rabid rat
+  killed by a(n) chameleon imitating a(n) pit fiend
+  killed by a(n) chameleon imitating a(n) baby gray dragon
+  killed by a(n) chameleon imitating a(n) stone golem
+  killed by Zlaw, the shopkeeper
+  killed by touching Werebane
+  killed by a(n) chameleon imitating a(n) ogre king
+  killed by a(n) silver dagger
+  poisoned by Medusa
+  killed by a(n) chameleon imitating a(n) forest centaur
+  poisoned by the Oracle's rotted corpse
+  killed by a(n) doppelganger imitating a(n) monk
+  deliberately plunged into a(n) pit of iron spikes
+  petrified by a(n) elf-lord
+  killed by a(n) doppelganger imitating a(n) rogue
+  killed by a(n) flesh golem of (a god)
+  unwisely tried to eat Famine
+  petrified by a(n) ogre
+  killed by touching The Heart of Ahriman
+  killed by a(n) chameleon imitating a(n) umber hulk
+  killed by a(n) chameleon imitating a(n) plains centaur
+  killed by a(n) chameleon imitating a(n) ettin zombie
+  killed by Neferet the Green
+  killed by a(n) chameleon imitating a(n) ice devil
+  killed by handling a(n) ring of increase damage
+  killed by a(n) chameleon imitating a(n) skeleton
+  killed by a(n) chameleon imitating a(n) shocking sphere
+  killed by a(n) chameleon imitating a(n) rothe
+  killed by a(n) stone giant of (a god)
+  killed by the Norn
+  killed by handling a(n) ring of searching
+  killed by a(n) guardian naga of (a god)
+  petrified by a(n) fire giant
+  killed by a(n) chameleon imitating a(n) Elvenking
+  killed by a(n) chameleon imitating a(n) small mimic
+  trickery
+  killed by handling a(n) wand of teleportation
+  killed by a(n) chameleon imitating a(n) quasit
+  killed by handling Grayswandir
+  killed by a(n) chameleon imitating a(n) python
+  killed by a(n) doppelganger imitating a(n) healer
+  killed by handling a(n) ring of sustain ability
+  killed by a(n) chameleon imitating a(n) baby black dragon
+  killed by a(n) erinys
+  killed by a(n) chameleon imitating a(n) Aleax
+  unwisely ate the body of Death
+  petrified by a(n) barrow wight
+  killed by handling a(n) silver spear
+  killed by a(n) chameleon imitating a(n) ogre lord
+  killed by handling a(n) ring of gain constitution
+  killed by handling a(n) ring of fire resistance
+  killed by a(n) doppelganger imitating a(n) valkyrie
+  killed by handling a(n) ring of poison resistance
+  killed by a(n) chameleon imitating a(n) warg
+  killed by a(n) cone of cold
+  killed by the Grand Master
+  killed by handling a(n) ring of increase accuracy
+  killed by a(n) doppelganger imitating a(n) baluchitherium
+  killed by a(n) chameleon imitating a(n) elf mummy
+  drowned in a(n) drowning
+  killed by a(n) chameleon imitating a(n) vampire bat
+  killed by a(n) chameleon imitating a(n) tengu
+  killed by a(n) chameleon imitating a(n) winter wolf cub
+  killed by a(n) chameleon imitating a(n) wraith
+  killed by a(n) chameleon imitating a(n) snake
+  killed by a(n) doppelganger imitating a(n) tourist
+  killed by a(n) chameleon imitating a(n) baby orange dragon
+  killed by chopping off (his|her) own foot
+  killed by a(n) Nazgul
+  petrified by a(n) sandestin imitating a(n) (cockatrice|chickatrice)
+  killed by a(n) chameleon imitating a(n) giant beetle
+  killed by molten lava
+  petrified by tripping over a(n) (cockatrice|chickatrice) corpse
+  killed by a(n) page
+  killed by Moloch's indifference
+  poisoned by a(n) cloud of poison gas
+  killed by a(n) roshi
+  killed by a(n) minotaur of (a god)
+  killed by Mjollnir
+  killed by a(n) master mind flayer priest of (a god)
+  killed by a(n) chameleon imitating a(n) giant zombie
+  killed by a(n) lynx of (a god)
+  killed by a(n) luckstone
+  petrified by a(n) scroll of genocide
+  killed by a(n) rothe of (a god)
+  killed by bumping into a(n) tree
+  killed by a(n) vampire lord in wolf form
+  killed by a(n) student
+  killed by a(n) chameleon imitating a(n) dwarf lord
+  killed by a(n) chameleon imitating a(n) flesh golem
+  killed by a(n) chameleon imitating a(n) dwarf king
+  burned by burning
+  killed by a(n) vampire in vampire lord form
+  killed by a(n) giant
+  killed by a(n) chameleon imitating a(n) demilich
+  unwisely tried to eat Pestilence
+  killed by a(n) war hammer
+  petrified by a(n) ogre lord
+  petrified by a(n) skeleton
+  unwisely tried to eat Death
+  killed by a(n) salamander priestess of (a god)
+  killed by a(n) chameleon imitating a(n) blue jelly
+  petrified by a(n) Medusa
+  killed by a(n) large kobold of (a god)
+  killed by a(n) chameleon imitating a(n) barbed devil
+  poisoned by a(n) rotted glob of black pudding
+  killed by Breezy; the shopkeeper
+  killed by a(n) chameleon imitating a(n) baby green dragon
+  killed by a(n) chameleon imitating a(n) mind flayer
+  unwisely ate the body of Famine
+  killed by Baalzebub
+  killed by a(n) chameleon imitating a(n) lurker above
+  killed by a(n) chameleon imitating a(n) long worm
+  killed by a(n) chameleon imitating a(n) little dog
+  killed by a(n) chameleon imitating a(n) Kop Kaptain
+  killed by a(n) chameleon imitating a(n) human mummy
+  killed by a(n) green dragon of (a god)
+  killed by a(n) chameleon imitating a(n) gold golem
+  petrified by a(n) green slime
+  killed by a(n) gray unicorn priestess of (a god)
+  petrified by a(n) Green-elf
+  killed by a(n) chameleon imitating a(n) gremlin
+  killed by a(n) hunter
+  killed by a(n) chameleon imitating a(n) gray unicorn
+  killed by a(n) aligned priest
+  killed by Lord Sato
+  killed by Lord Carnarvon
+  killed by a(n) gray dragon priestess of (a god)
+  killed by a(n) chameleon imitating a(n) hill giant
+  crushed to death by a(n) gas spore's explosion
+  killed by a(n) chameleon imitating a(n) guardian naga
+  killed by a(n) priest
+  killed by a(n) chameleon imitating a(n) hezrou
+  unwisely ate the brain of Famine
+  killed by the Arch Priest
+  turned to slime by a(n) Keystone Kop
+  unwisely ate the brain of Death
+  killed by sitting on lava
+  turned to slime by a(n) imperious order
+  unwisely ate the brain of Pestilence
+  killed by a(n) bat of (a god)
+  unwisely ate the body of Pestilence
+  petrified by a(n) wererat
+  killed by the Wizard of Yendor disguised as a(n) (cockatrice|chickatrice)
+  petrified by genocidal confusion
+  petrified by a(n) Keystone Kop
+  petrified by a(n) Kop Kaptain
+  petrified by a(n) ranger
+  petrified by a(n) rogue
+  petrified by a(n) salamander
+  petrified by a(n) samurai
+  petrified by stolen (cockatrice|chickatrice) corpse
+  petrified by a(n) Uruk-hai
+  petrified by a(n) hobbit
+  petrified by a(n) orc-captain
+  petrified by a(n) stone giant
+  petrified by a(n) Elvenking
+  petrified by a(n) archeologist
+  petrified by a(n) Angel
+  petrified by a(n) aligned priest
+  petrified by a(n) wizard
+  petrified by a(n) hobgoblin
+  petrified by a(n) hill orc
+  killed by the Wizard of Yendor disguised as a(n) floating eye
+  molten lava
+  killed by the Wizard of Yendor disguised as a(n) troll
+  poisoned by a(n) erinys
+  killed by a(n) baby white dragon of (a god)
+  poisoned by an
+  killed by Twoflower
+  killed by Zennia, the shopkeeper
+  poisoned by a(n) silver arrow
+  petrified by a(n) bone devil
+  petrified by a(n) goblin
+  killed by a(n) baby orange dragon of (a god)
+  petrified by a(n) djinni
+  petrified by a(n) dwarf king
+  petrified by a(n) frost giant
+  petrified by a(n) gnome
+  petrified by a(n) gnome lord
+  poisoned by a(n) poisoned needle
+  poisoned by a(n) poisoned blast
+  petrified by a(n) dwarf lord
+  killed by a(n) giant bat priest of (a god)
+  killed by a(n) black dragon of (a god)
+  killed by a(n) high priest of (a god)
+  killed by a(n) chameleon imitating a(n) giant spider
+  killed by a(n) Mordor orc of (a god)
+  killed by a(n) mastodon priest of (a god)
+  killed by a(n) lurker above priest of (a god)
+  killed by a(n) chameleon imitating a(n) gnome king
+  killed by a(n) Kop Kaptain of (a god)
+  killed by a(n) kobold called
+  killed by a(n) jabberwock of (a god)
+  killed by a(n) chameleon imitating a(n) Green-elf
+  killed by a(n) piranha of (a god)
+  killed by a(n) chameleon imitating a(n) hill orc
+  killed by a(n) chameleon imitating a(n) horned devil
+  killed by a(n) chameleon imitating a(n) housecat
+  killed by a(n) chameleon imitating a(n) killer bee
+  killed by a(n) chameleon imitating a(n) kitten
+  killed by a(n) chameleon imitating a(n) large cat
+  killed by a(n) chameleon imitating a(n) leather golem
+  killed by a(n) chameleon imitating a(n) piranha
+  killed by a(n) chameleon imitating a(n) red naga
+  killed by a(n) neanderthal
+  killed by a(n) piranha priest(ess)
+  killed by a(n) chameleon imitating a(n) spotted jelly
+  killed by a(n) sandestin imitating a(n) barbed devil
+  killed by a(n) sandestin imitating a(n) Woodland-elf
+  killed by a(n) sandestin imitating a(n) vampire lord
+  killed by a(n) sandestin imitating a(n) quasit
+  killed by a(n) sandestin imitating a(n) piranha
+  killed by a(n) sandestin imitating a(n) master mind flayer
+  killed by a(n) sandestin imitating a(n) horse
+  killed by a(n) sandestin imitating a(n) guardian naga
+  killed by a(n) sandestin imitating a(n) disenchanter
+  killed by a(n) sandestin imitating a(n) black pudding
+  killed by a(n) sandestin imitating a(n) baluchitherium
+  killed by a(n) pit fiend priest of (a god)
+  killed by a(n) sandestin imitating a(n) balrog
+  killed by a(n) rope golem of (a god)
+  killed by a(n) rock mole of (a god)
+  killed by a(n) red naga of (a god)
+  killed by a(n) quivering blob of (a god)
+  killed by a(n) queen bee of (a god)
+  killed by a(n) chameleon imitating a(n) gecko
+  killed by a(n) plains centaur priest of (a god)
+  killed by a(n) pit viper of (a god)
+  killed by a(n) chameleon imitating a(n) shark
+  killed by a(n) chameleon imitating a(n) stone giant
+  killed by a(n) sandestin imitating a(n) xorn
+  killed by a(n) doppelganger imitating a(n) Olog-hai
+  killed by a(n) doppelganger imitating a(n) winged gargoyle
+  killed by a(n) guide
+  killed by a(n) doppelganger imitating a(n) yellow dragon
+  killed by a(n) grid bug of (a god)
+  killed by a(n) doppelganger imitating a(n) iron golem
+  killed by a(n) Grey-elf priestess of (a god)
+  killed by a(n) doppelganger imitating a(n) ogre king
+  killed by a(n) gremlin priest of (a god)
+  killed by a(n) doppelganger imitating Death
+  killed by a(n) doppelganger imitating a(n) vampire
+  killed by a(n) doppelganger imitating Scorpius
+  killed by a(n) doppelganger imitating the Wizard of Yendor
+  killed by a(n) doppelganger imitating Yeenoghu
+  killed by a(n) dwarf king of (a god)
+  killed by a(n) dwarf zombie priest of (a god)
+  killed by a(n) fire ant of (a god)
+  killed by a(n) ghost
+  killed by a(n) ghoul of (a god)
+  killed by a(n) glass golem priest of (a god)
+  killed by a(n) doppelganger imitating a(n) water troll
+  killed by a(n) doppelganger imitating a(n) troll
+  killed by a(n) chameleon imitating a(n) straw golem
+  killed by a(n) doppelganger imitating a(n) barbed devil
+  killed by a(n) chameleon imitating a(n) white unicorn
+  killed by a(n) chameleon imitating a(n) wolf
+  killed by a(n) chameleon imitating a(n) ochre jelly
+  killed by a(n) killer bee, while helples
+  killed by a(n) (cockatrice|chickatrice) of (a god)
+  killed by a(n) chieftain
+  killed by a(n) crocodile priest of (a god)
+  killed by a(n) dingo of (a god)
+  killed by a(n) doppelganger imitating a(n) balrog
+  killed by a(n) doppelganger imitating a(n) caveman
+  killed by a(n) doppelganger imitating a(n) straw golem
+  killed by a(n) doppelganger imitating a(n) fire elemental
+  killed by a(n) homunculus, while helples
+  killed by a(n) doppelganger imitating a(n) frost giant
+  killed by a(n) doppelganger imitating a(n) knight
+  killed by a(n) doppelganger imitating a(n) leocrotta
+  killed by a(n) doppelganger imitating a(n) master mind flayer
+  killed by a(n) doppelganger imitating a(n) plains centaur
+  killed by a(n) doppelganger imitating a(n) purple worm
+  killed by a(n) doppelganger imitating a(n) samurai
+  killed by a(n) sandestin imitating a(n) xan
+  killed by a(n) sandestin imitating a(n) Aleax
+  killed by Shaman Karnov
+  killed by handling a(n) ring of gain strength
+  killed by handling a(n) silver arrow
+  killed by handling a(n) ring of warning
+  killed by handling a(n) ring of teleport control
+  killed by handling a(n) ring of stealth
+  killed by handling a(n) ring of slow digestion
+  killed by handling a(n) ring of shock resistance
+  killed by handling a(n) ring of see
+  killed by handling a(n) ring of polymorph
+  killed by handling a(n) ring of free action
+  killed by handling a(n) wand of digging
+  killed by handling a(n) ring of conflict
+  killed by handling a(n) ring of aggravate monster
+  killed by handling a(n) ring of adornment
+  killed by a(n) bone devil priestess of (a god)
+  killed by Ms. Wonotobo, the shopkeepe
+  killed by Ms. Pakka Pakka, the shopke
+  killed by Midyat, the shopkeeper
+  killed by Llanrwst; the shopkeeper
+  killed by Labouheyre, the shopkeeper
+  killed by handling a(n) wand of death
+  killed by handling a(n) wand of fire
+  killed by Geryon
+  killed by handling silver arrows
+  killed by Pelias
+  killed by a(n) black dragon priest of (a god)
+  killed by Orion
+  killed by King Arthur
+  killed by a(n) shopkeeper, while helpl
+  killed by a(n) blue dragon priest of (a god)
+  killed by Hippocrates
+  killed by handling the Bell of Opening
+  killed by handling Sting
+  killed by handling a(n) wand of striking
+  killed by handling a(n) wand of light
+  killed by handling a(n) wand of speed monster
+  killed by handling a(n) wand of slow monster
+  killed by handling a(n) wand of sleep
+  killed by handling a(n) wand of secret door detection
+  killed by handling a(n) wand of opening
+  killed by handling a(n) wand of nothing
+  killed by handling a(n) wand of make
+  killed by handling a(n) wand of magic missile
+  killed by handling a(n) wand of lightning
+  killed by Caergybi; the shopkeeper
+  killed by Feather; the shopkeeper
+  killed by a(n) sandestin imitating a(n) arch-lich
+  killed by a(n) vampire in fog cloud form
+  killed by a(n) aklys
+  killed by a(n) chameleon imitating a(n) coyote
+  killed by a(n) acolyte
+  killed by a(n) yeti of (a god)
+  killed by a(n) wraith of (a god)
+  killed by a(n) winter wolf priest of (a god)
+  killed by a(n) chameleon imitating a(n) dingo
+  killed by a(n) vampire of (a god)
+  killed by a(n) titan priest of (a god)
+  killed by a(n) attendant
+  killed by a(n) thug
+  killed by a(n) soldier ant priest of (a god)
+  killed by a(n) shark priest of (a god)
+  killed by a(n) chameleon imitating a(n) fox
+  killed by a(n) sandestin
+  killed by a(n) sandestin imitating a(n) orc mummy
+  killed by a(n) sandestin imitating a(n) ogre king
+  killed by a(n) sandestin imitating a(n) ettin
+  killed by a(n) sandestin imitating a(n) Elvenking
+  killed by a(n) chameleon imitating a(n) couatl
+  killed by a(n) elf mummy of (a god)
+  killed by Feather, the shopkeeper
+  killed by a(n) titan of (a god)
+  killed by exploding potions
+  killed by Dirk, the shopkeeper
+  killed by Dharma, the shopkeeper
+  killed by boiling water
+  killed by Blaze; the shopkeeper
+  killed by Azura; the shopkeeper
+  killed by a(n) chameleon imitating a(n) baby red dragon
+  killed by a(n) ochre jelly of (a god)
+  killed by a(n) iron golem priestess of (a god)
+  killed by a(n) sandestin imitating a(n) winged gargoyle
+  killed by a(n) chameleon imitating a(n) brown mold
+  killed by a(n) chameleon imitating a(n) Woodland-elf
+  killed by a(n) chameleon imitating a(n) giant bat
+  killed by a(n) chameleon imitating a(n) barrow wight
+  killed by a(n) chameleon imitating a(n) baby purple worm
+  killed by a(n) chameleon imitating a(n) black naga
+  killed by a(n) chameleon imitating a(n) black unicorn
+  killed by a(n) chameleon imitating a(n) blue dragon
+  killed by a(n) ettin of (a god)
+  killed by a(n) energy vortex of (a god)
+  killed by Queyssac, the shopkeeper
