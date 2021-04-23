@@ -10,6 +10,7 @@ dependencies = [
  "lazy_static",
  "log",
  "pretty_env_logger",
+ "rand 0.8.3",
  "reqwest",
  "sqlite",
  "telegram-markov-chain",
