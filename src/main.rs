@@ -150,7 +150,9 @@ enum Command {
     #[command(description = "Post a new message")]
     Post,
     #[command(description = "Get the number of beers on tap")]
-    Count
+    Count,
+    #[command(description = "Die stupidly")]
+    Yasd
 }
 
 async fn answer(cx: UpdateWithCx<AutoSend<Bot>, Message>, command: Command) -> ResponseResult<()> {
@@ -234,6 +236,15 @@ async fn answer(cx: UpdateWithCx<AutoSend<Bot>, Message>, command: Command) -> R
 	    } else {
 		cx.reply_to("I can't seem to find any beers.").await?
 	    }
+	},
+	Command::Yasd => {
+	    log::info!("Dying stupidly...");
+	    if let Ok(death) = die().await {
+		cx.reply_to(format!("{}", death)).await?
+	    } else {
+		cx.reply_to("I just can't seem to die.").await?
+	    }
+	    
 	}
     };
     
