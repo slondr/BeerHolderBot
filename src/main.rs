@@ -20,6 +20,9 @@ use teloxide::{prelude::*, utils::command::BotCommand, requests::ResponseResult}
 use tokio::sync::Mutex;
 use lazy_static::lazy_static;
 use std::error::Error;
+use std::fs::File;
+use std::io::prelude::*;
+use rand::prelude::*;
 
 type AsyncResult<T> = Result<T, Box<dyn Error + Send + Sync>>;
 
@@ -31,6 +34,35 @@ struct Beer {
 lazy_static! {
     static ref TAP: Mutex<Vec<String>> = Mutex::new(Vec::new());
     static ref CONNECTION: Mutex<sqlite::Connection> = Mutex::new(sqlite::open("tap.db").unwrap());
+}
+
+async fn die() -> AsyncResult<String> {
+    // first, open the deaths file
+    let path = std::path::Path::new("deaths.txt");
+    let lines = 1107; // number of choices
+    
+    // open the file (read-only)
+    let mut file = match File::open(&path) {
+	Ok(f) => f,
+	Err(e) => return Err(Box::new(e))
+    };
+
+    // read the file's contents into a string
+    let mut contents = String::new();
+    match file.read_to_string(&mut contents) {
+	Ok(_) => (),
+	Err(reason) => return Err(Box::new(reason))
+    }
+
+    // vectorize contents
+    let contents: Vec<&str> = contents.split("\n").collect::<Vec<&str>>();
+
+    // generate a random death index
+    let mut rng = rand::thread_rng();
+    let index: usize = rng.gen_range(0..lines - 1);
+
+    // return the chosen death
+    Ok(String::from(contents[index]))
 }
 
 async fn initialize_database() -> AsyncResult<()> {
