@@ -55,7 +55,7 @@ async fn die() -> AsyncResult<String> {
     }
 
     // vectorize contents
-    let contents: Vec<&str> = contents.split("\n").collect::<Vec<&str>>();
+    let contents: Vec<&str> = contents.split('\n').collect::<Vec<&str>>();
 
     // generate a random death index
     let mut rng = rand::thread_rng();
