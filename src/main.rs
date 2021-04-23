@@ -241,7 +241,21 @@ async fn answer(cx: UpdateWithCx<AutoSend<Bot>, Message>, command: Command) -> R
 	    log::info!("Dying stupidly...");
 	    if let Ok(death) = die().await {
 		let caller = cx.update.from().unwrap().username.as_ref().unwrap();
-		    cx.reply_to(format!("{}, {}", caller, death)).await?
+		    cx.reply_to(format!("<code>
+               ----------
+              /          \\
+             /    REST    \\
+            /      IN      \\
+           /     PEACE      \\
+          /                  \\
+          |     @{}     
+          | {} 
+          |                  |
+          |                  |
+          |                  |
+          |       2021       |
+         *|     *  *  *      | *
+_________)/\\\\_//(\\/(/\\)/\\//\\/|_)_______</code>", caller, death)).parse_mode(teloxide::types::ParseMode::Html).await?
 	    } else {
 		cx.reply_to("I just can't seem to die.").await?
 	    }
