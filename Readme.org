@@ -20,6 +20,9 @@ A Telegram bot that holds your beer
 - =/count=
 
   Get the current count of stored beers for this tap.
+- =/yasd=
+
+  Die stupidly.
 * Building & Running
 This project is managed with Cargo, so just build it with =cargo build= and whatever flags you want.
 
