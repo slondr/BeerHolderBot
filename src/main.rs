@@ -240,7 +240,8 @@ async fn answer(cx: UpdateWithCx<AutoSend<Bot>, Message>, command: Command) -> R
 	Command::Yasd => {
 	    log::info!("Dying stupidly...");
 	    if let Ok(death) = die().await {
-		cx.reply_to(death).await?
+		let caller = cx.update.from().unwrap().username.as_ref().unwrap();
+		    cx.reply_to(format!("{}, {}", caller, death)).await?
 	    } else {
 		cx.reply_to("I just can't seem to die.").await?
 	    }
