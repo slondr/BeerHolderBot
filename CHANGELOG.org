@@ -1,3 +1,5 @@
+* 0.3.8
++ Responses to =/corn= commands are now embedded rather than posted as a link
 * 0.3.7
 + Added =/yasd=
 + Automate deployments
