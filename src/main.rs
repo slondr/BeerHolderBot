@@ -123,8 +123,12 @@ async fn harvest_corn() -> AsyncResult<String> {
 	    .await.unwrap().text().await.unwrap();
 	// response format is some pretty nested json
 	let parsed_response = json::parse(&response);
-	let img_url = &parsed_response.unwrap()["urls"]["raw"];
-	Ok(img_url.to_string())
+	if let Ok(url) = parsed_response {
+	    let img_url = &url["urls"]["regular"];
+	    Ok(img_url.to_string())
+	} else {
+	    Err("No corn to harvest.".into())
+	}
     } else {
 	Err("You don't have a farm.".into())
     }
@@ -217,7 +221,8 @@ async fn answer(cx: UpdateWithCx<AutoSend<Bot>, Message>, command: Command) -> R
 	    // harvest corn
 	    log::info!("Harvesting corn");
 	    if let Ok(corn) = harvest_corn().await {
-		cx.reply_to(corn).await?
+		cx.answer_photo(teloxide::types::InputFile::url(corn)).await?
+		// cx.reply_to(format!("<img src=\"{}\"/>", corn)).parse_mode(teloxide::types::ParseMode::Html).await?
 	    } else {
 		log::error!("An error occurred within harvest_corn()");
 		cx.reply_to("You don't have a farm.").await?
