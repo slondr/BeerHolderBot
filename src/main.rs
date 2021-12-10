@@ -17,12 +17,16 @@
 #![allow(non_snake_case)]
 
 use teloxide::{prelude::*, utils::command::BotCommand, requests::ResponseResult};
-use tokio::sync::Mutex;
-use lazy_static::lazy_static;
+// use tokio::sync::Mutex;
+// use lazy_static::lazy_static;
 use std::error::Error;
 use std::fs::File;
 use std::io::prelude::*;
 use rand::prelude::*;
+//use postgres::Client;
+use openssl::ssl::{SslConnector, // SslConnectorBuilder
+		   SslMethod};
+use postgres_openssl::MakeTlsConnector;
 
 type AsyncResult<T> = Result<T, Box<dyn Error + Send + Sync>>;
 
@@ -30,11 +34,26 @@ struct Beer {
     id: i64,
     text: String
 }
-
-lazy_static! {
-    static ref TAP: Mutex<Vec<String>> = Mutex::new(Vec::new());
-    static ref CONNECTION: Mutex<sqlite::Connection> = Mutex::new(sqlite::open("tap.db").unwrap());
+f
+n get_db_connection() -> postgres::Client {
+    let builder = SslConnector::builder(SslMethod::tls()).unwrap();
+    let connector = MakeTlsConnector::new(builder.build());
+    postgres::Client::connect(
+	"host=slondr-pg.postgres.database.azure.com port=5432 dbname=beer user=postgres_slondr_admin@slondr-pg password=4ac7e0ca-5518-11ec-ab6e-645d86a0b914 sslmode=require",
+	connector // postgres::make_tls_connect("slondr-pg.postgres.database.azure.com")
+    ).unwrap()
 }
+
+// lazy_static! {
+//     static ref TAP: Mutex<Vec<String>> = Mutex::new(Vec::new());
+//     static ref BUILDER: SslConnectorBuilder = SslConnector::builder(SslMethod::tls()).unwrap();
+//     static ref CONNECTOR: MakeTlsConnector = MakeTlsConnector::new(BUILDER.build());
+//     static ref CONNECTION: Mutex<postgres::Client> = Mutex::new(postgres::Client::connect(
+// 	"host=slondr-pg.postgres.database.azure.com port=5432 dbname=beer user=postgres_slondr_admin@slondr-pg password=4ac7e0ca-5518-11ec-ab6e-645d86a0b914 sslmode=require",
+// 	//	postgres::TlsMode::Require(CONNECTOR)
+// 	CONNECTOR
+//     ).unwrap());
+// }
 
 async fn die() -> AsyncResult<String> {
     // first, open the deaths file
@@ -66,52 +85,48 @@ async fn die() -> AsyncResult<String> {
 }
 
 async fn initialize_database() -> AsyncResult<()> {
-    CONNECTION.lock().await.execute("CREATE TABLE IF NOT EXISTS tap (
-      id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    get_db_connection().await.execute("CREATE TABLE IF NOT EXISTS tap (
+      id SERIAL NOT NULL PRIMARY KEY,
       chat_id INTEGER NOT NULL,
-      text TEXT)")?;
+      text TEXT)", &[])?;
     Ok(())
 }
 
 async fn create_beer(chat_id: i64, content: String) -> AsyncResult<()> {
-    CONNECTION.lock().await
-	.execute(format!("INSERT INTO tap (chat_id, text) VALUES ('{}', '{}')", chat_id, content))?;
+    get_db_connection().await
+	.execute("INSERT INTO tap (chat_id, text) VALUES ($1, $2)", &[&chat_id, &content])?;
     Ok(())
 }
 
 async fn get_all_beers(chat_id: i64) -> AsyncResult<Vec<Beer>> {
     let mut beers: Vec<Beer> = Vec::new();
-    let c =  CONNECTION.lock().await;
-    let mut statement = c.prepare(format!("SELECT id, text FROM tap WHERE chat_id={}", chat_id))?;
-    while let sqlite::State::Row = statement.next().unwrap() {
+    let mut c =  get_db_connection().await;
+    for beer in c.query("SELECT id, text FROM tap WHERE chat_id=$1", &[&chat_id])? {
 	beers.push(Beer {
-	    id: statement.read::<i64>(0)?,
-	    text: statement.read::<String>(1)?
+	    id: beer.get(0),
+	    text: beer.get(1)
 	});
     }
     Ok(beers)
 }
 
 async fn get_beer_count(chat_id: i64) -> AsyncResult<i64> {
-    let c = CONNECTION.lock().await;
-    let mut statement = c.prepare(format!("SELECT COUNT(id) FROM tap WHERE chat_id={}", chat_id))?;
-    if let sqlite::State::Row = statement.next().unwrap() {
-	Ok(statement.read::<i64>(0)?)
-    } else {
-	Err("could not retrieve beer count".into())
+    let mut c = get_db_connection().await;
+    let r  = c.query("SELECT COUNT(id) FROM tap WHERE chat_id=$1", &[&chat_id])?;
+    let r2 = r.get(0);
+    match r2 {
+	Some(a) => Ok(a.get(0)),
+	None => Err("wee woo".into())
     }
 }
 
 async fn quaff(id: i64) -> AsyncResult<String> {
-    let c = CONNECTION.lock().await;
-    let mut statement = c.prepare(format!("SELECT text FROM tap WHERE id={}", id))?;
-    if let sqlite::State::Row = statement.next()?  {
-	let text = statement.read::<String>(0)?;
-	// remove the beer from the database
-	c.execute(format!("DELETE FROM tap WHERE id={}", id))?;
-	Ok(text)
+    let mut c = get_db_connection().await;
+    if let Some(beer_text) = c.query("SELECT text FROM tap WHERE id=$1", &[&id])?.get(0) {
+	c.execute("DELETE FROM tap WHERE id=$1", &[&id])?;
+	Ok(beer_text.get(0))
     } else {
-	Err("could not retrieve beer text".into())
+	Err("nobeer".into())
     }
 }
 
